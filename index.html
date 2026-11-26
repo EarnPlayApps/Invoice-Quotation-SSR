@@ -328,6 +328,82 @@
 .paper.template-12 .doc-head:after{width:240px;height:240px;right:-60px;top:-110px;border-radius:50%;transform:rotate(20deg)}
 @media(max-width:560px){.paper{width:794px;transform-origin:top left}.paper .doc-head{grid-template-columns:1.5fr 1fr .55fr;gap:12px;padding-left:25px;padding-right:25px}.paper .company-name{font-size:19px}.paper .doc-meta{gap:7px}.paper .doc-intro{grid-template-columns:1fr 1fr}.paper .bill-project{grid-template-columns:1.1fr .9fr}.paper .lower-grid{grid-template-columns:1.1fr .9fr}}
 
+
+/* SSR welding & fabrication luxury collection — 12 real selectable A4 templates */
+.paper{--head:#081b34;--accent:#d4ad68;--pale:#edf2f8}
+.paper .doc-head{background-color:var(--head);background-image:linear-gradient(128deg,transparent 0 63%,#ffffff0b 63% 65%,transparent 65%),radial-gradient(circle at 91% 76%,#f6c66a40 0 2px,transparent 3px),radial-gradient(circle at 88% 72%,#f6c66a35 0 1px,transparent 2px);border-bottom:5px solid var(--accent)}
+.paper .doc-head:after{content:"";position:absolute;right:-30px;top:-80px;width:250px;height:250px;border:2px solid color-mix(in srgb,var(--accent) 70%,transparent);border-radius:50%;box-shadow:0 0 0 14px #ffffff08,0 0 0 30px #ffffff05}
+.paper .head-promise{font-size:8px;line-height:1.8}
+.paper .head-promise:after{content:"✦  ARC  •  STEEL  •  STRUCTURE";display:block;margin-top:12px;font-size:7px;letter-spacing:1px;color:var(--accent)}
+.paper .intro-title h1{letter-spacing:2.8px}
+.paper .section-kicker{letter-spacing:1.7px}
+.paper .bill-card,.paper .project-card{border-radius:2px 12px 2px 12px;border-color:color-mix(in srgb,var(--accent) 48%,#dfe4eb)}
+.paper .items-table th{letter-spacing:.6px}
+.paper .grand-line{background:linear-gradient(100deg,var(--accent),color-mix(in srgb,var(--accent) 55%,white))}
+.paper .doc-footer{background:linear-gradient(110deg,var(--head),color-mix(in srgb,var(--head) 80%,#52657c));}
+.paper.template-1{--head:#071d38;--accent:#d6ad63;--pale:#edf3fa}
+.paper.template-1 .doc-head:before{content:"";position:absolute;left:0;top:0;border-top:100px solid #174a89;border-right:100px solid transparent}
+.paper.template-1 .doc-head{background-image:linear-gradient(135deg,#0a2344 0 66%,#174a89 66% 76%,#0a2344 76%)}
+.paper.template-2{--head:#12365c;--accent:#b9d4e8;--pale:#edf4f9}
+.paper.template-2 .doc-head{background-image:linear-gradient(115deg,#12365c 0 68%,#27577e 68% 82%,#12365c 82%)}
+.paper.template-2 .doc-intro{border-bottom:3px solid var(--accent)}
+.paper.template-2 .bill-card,.paper.template-2 .project-card{background:#f3f7fb;border-left:4px solid var(--accent)}
+.paper.template-3{--head:#092c55;--accent:#65b8e8;--pale:#eaf4fb}
+.paper.template-3 .doc-head{background-image:linear-gradient(125deg,#092c55 0 55%,#14528b 55% 75%,#092c55 75%)}
+.paper.template-3 .doc-head:after{width:210px;height:210px;border-radius:0;transform:rotate(35deg);border-width:2px}
+.paper.template-3 .doc-intro{border-bottom:4px double var(--accent)}
+.paper.template-4{--head:#252d38;--accent:#aeb9c5;--pale:#f0f2f4}
+.paper.template-4 .doc-head{background-image:linear-gradient(120deg,#202833 0 70%,#3c4653 70% 72%,#202833 72%)}
+.paper.template-4 .doc-head:after{border-radius:0;transform:rotate(45deg);border-color:#c6d0dc66}
+.paper.template-4 .grand-line{background:linear-gradient(90deg,#aeb9c5,#e5e9ed);color:#202833}
+.paper.template-5{--head:#f8f6f0;--accent:#b58d50;--pale:#f4f0e7}
+.paper.template-5 .doc-head{background:linear-gradient(110deg,#faf8f2,#eee8dc);border-bottom:2px solid var(--accent)}
+.paper.template-5 .company-name,.paper.template-5 .head-promise b{color:#283447}
+.paper.template-5 .company-reg,.paper.template-5 .head-contact{color:#596477}
+.paper.template-5 .head-promise{color:#96733f}
+.paper.template-5 .doc-logo-fallback{color:#a77c3e;background:#fff;border-color:var(--accent)}
+.paper.template-5 .doc-head:after{border-color:#b58d5033}
+.paper.template-6{--head:#fffdf8;--accent:#c5a46b;--pale:#f8f4eb}
+.paper.template-6 .doc-head{background:linear-gradient(120deg,#fffdf8 0 72%,#f0e8d8 72%);border-bottom:3px double var(--accent)}
+.paper.template-6 .company-name,.paper.template-6 .head-promise b{color:#253246}
+.paper.template-6 .company-reg,.paper.template-6 .head-contact{color:#5b6676}
+.paper.template-6 .head-promise{color:#9a7947}
+.paper.template-6 .doc-head:after{display:none}
+.paper.template-6 .intro-title h1{font-weight:400;letter-spacing:4px}
+.paper.template-7{--head:#f1f3f5;--accent:#8293a5;--pale:#f3f5f7}
+.paper.template-7 .doc-head{background:linear-gradient(110deg,#f8fafb,#e7ebef);border-bottom:2px solid var(--accent)}
+.paper.template-7 .company-name,.paper.template-7 .head-promise b{color:#293849}
+.paper.template-7 .company-reg,.paper.template-7 .head-contact{color:#5a6878}
+.paper.template-7 .head-promise{color:#52677d}
+.paper.template-7 .doc-logo-fallback{color:#536b82;background:#fff;border-color:var(--accent)}
+.paper.template-7 .doc-head:after{border-radius:0;transform:rotate(45deg);border-color:#8293a533}
+.paper.template-8{--head:#fff8f2;--accent:#b56b42;--pale:#f8eee7}
+.paper.template-8 .doc-head{background:linear-gradient(115deg,#fffaf5,#f3e4d8);border-bottom:4px solid var(--accent)}
+.paper.template-8 .company-name,.paper.template-8 .head-promise b{color:#553321}
+.paper.template-8 .company-reg,.paper.template-8 .head-contact{color:#735a4c}
+.paper.template-8 .head-promise{color:#9b5635}
+.paper.template-8 .doc-head:after{border-color:#b56b4233}
+.paper.template-8 .doc-logo-fallback{color:#a85e37;background:#fff;border-color:var(--accent)}
+.paper.template-9{--head:#090b10;--accent:#d6ad58;--pale:#f3eee3}
+.paper.template-9 .doc-head{background:radial-gradient(ellipse at 88% 35%,#403522,#090b10 62%);border-bottom:7px solid var(--accent)}
+.paper.template-9 .doc-head:after{border-radius:50%;border-width:3px;border-color:#d6ad5866}
+.paper.template-9 .doc-logo-fallback{border-radius:50%;font-family:Georgia,serif}
+.paper.template-9 .bill-card,.paper.template-9 .project-card{background:#f8f4eb;border-color:#d6ad58}
+.paper.template-10{--head:#171c24;--accent:#c6d0da;--pale:#f0f2f4}
+.paper.template-10 .doc-head{background:linear-gradient(130deg,#10151c 0 62%,#303b49 62% 78%,#10151c 78%);border-bottom:5px solid var(--accent)}
+.paper.template-10 .doc-head:after{border-radius:0;transform:rotate(45deg);border-color:#c6d0da55}
+.paper.template-10 .grand-line{background:linear-gradient(100deg,#b7c1cb,#edf0f3);color:#1b2530}
+.paper.template-11{--head:#061d2c;--accent:#55b8c7;--pale:#eaf4f5}
+.paper.template-11 .doc-head{background:linear-gradient(120deg,#061d2c 0 55%,#0b4656 55% 76%,#061d2c 76%);border-bottom:6px solid var(--accent)}
+.paper.template-11 .doc-head:after{border-radius:50%;border-color:#55b8c755;box-shadow:0 0 0 16px #55b8c711,0 0 0 34px #55b8c708}
+.paper.template-11 .grand-line{background:linear-gradient(100deg,#55b8c7,#b8e4e7);color:#062c37}
+.paper.template-12{--head:#171318;--accent:#c78c63;--pale:#f5eee9}
+.paper.template-12 .doc-head{background:linear-gradient(110deg,#171318 0 64%,#482b2b 64% 78%,#171318 78%);border-bottom:8px solid var(--accent)}
+.paper.template-12 .doc-head:after{border-radius:50%;border:3px double #c78c6380;width:220px;height:220px}
+.paper.template-12 .grand-line{background:linear-gradient(100deg,#b87450,#e6b996);color:#321e1a}
+.paper.template-12 .bill-card,.paper.template-12 .project-card{border-color:#c78c63;background:#fcf7f3}
+@media(max-width:560px){.paper .head-promise:after{font-size:6px;letter-spacing:.4px}.paper .doc-head:after{right:-105px}}
+
 </style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
 <main><div class="tabs no-print"><button class="tab active" data-tab="form">Maklumat</button><button class="tab" data-tab="preview">Preview A4</button><button class="tab" data-tab="history">Rekod</button></div>
@@ -375,7 +451,7 @@
 </main>
 <script>
 const $=id=>document.getElementById(id);let zoom=1,records=JSON.parse(localStorage.getItem('ssr_records')||'[]'),seq={QT:1,INV:1};
-const templateNames=["SSR Signature Gold","Emerald Corporate","Royal Blue Executive","Burgundy Prestige","Amethyst Creative","Teal Industrial","Graphite Minimal","Terracotta Classic","Steel Professional","Obsidian Luxury","Forest Business","Crimson Modern"];for(let i=1;i<=12;i++){let o=document.createElement('option');o.value=i;o.textContent=String(i).padStart(2,'0')+' · '+templateNames[i-1];$('template').append(o)}
+const templateNames=["01 · Arc Weld Navy","02 · Blue Steel Pro","03 · Royal Fabrication","04 · Graphite Precision","05 · Ivory Workshop","06 · Champagne Craft","07 · Silverline Engineering","08 · Copper Forge","09 · Obsidian Gold","10 · Platinum Industrial","11 · Midnight Arc","12 · Signature Foundry"];for(let i=1;i<=12;i++){let o=document.createElement('option');o.value=i;o.textContent=String(i).padStart(2,'0')+' · '+templateNames[i-1];$('template').append(o)}
 $('date').value=new Date().toISOString().slice(0,10);$('due').value=new Date(Date.now()+30*86400000).toISOString().slice(0,10);
 function money(n){return 'RM '+Number(n||0).toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2})}
 function addItem(desc='',qty=1,price=0){let d=document.createElement('div');d.className='item';d.innerHTML='<div class="field"><label>Butiran</label><input class="desc" placeholder="Contoh: Kerja fabrikasi" value="'+String(desc).replace(/"/g,'&quot;')+'"></div><div class="field"><label>Kuantiti</label><input class="qty" type="number" min="0" step="any" value="'+qty+'"></div><div class="field"><label>Harga (RM)</label><input class="price" type="number" min="0" step=".01" value="'+price+'"></div><button class="btn danger remove" aria-label="Buang">×</button>';d.querySelectorAll('input').forEach(x=>x.addEventListener('input',calc));d.querySelector('.remove').onclick=()=>{d.remove();calc()};$('items').append(d);calc()}
@@ -399,13 +475,13 @@ let terms=esc($('terms').value).replaceAll('\\n','<br>');
 let depositLine=type==='QT'?'Deposit ('+($('deposit').value||0)+'%)':'Deposit received';
 let signature=window.ssrAssets&&window.ssrAssets.sign?'<img class="signature-image" src="'+window.ssrAssets.sign+'">':'';
 p.innerHTML=
-'<section class="doc-head"><div class="head-brand">'+logo+'<div class="brand-copy"><div class="company-name">'+company+'</div><div class="company-reg">'+(reg?'REGISTRATION NO. '+reg:'WELDING · FABRICATION · INDUSTRIAL SERVICES')+'</div><div class="brand-motto">QUALITY · CRAFTSMANSHIP · TRUST</div></div></div><div class="head-contact"><div>'+address+'</div><div>'+(phone?'TEL  '+phone:'')+'</div><div>'+(email?email:'')+'</div></div><div class="head-promise">BUILT ON<br><b>QUALITY</b><br>MADE TO LAST</div></section>'+
-'<section class="doc-intro"><div class="intro-title"><h1>'+title+'</h1><div class="intro-sub">PROFESSIONAL SOLUTIONS FOR EVERY PROJECT</div></div><div class="doc-meta"><div><span>'+(type==='QT'?'QUOTATION NO.':'INVOICE NO.')+'</span><b>'+no+'</b></div><div><span>DATE</span><b>'+esc(date)+'</b></div><div><span>'+(type==='QT'?'VALID UNTIL':'DUE DATE')+'</span><b>'+esc(due)+'</b></div><div><span>CURRENCY</span><b>MYR</b></div></div></section>'+
+'<section class="doc-head"><div class="head-brand">'+logo+'<div class="brand-copy"><div class="company-name">'+company+'</div><div class="company-reg">'+(reg?'REGISTRATION NO. '+reg:'WELDING · FABRICATION · INDUSTRIAL SERVICES')+'</div><div class="brand-motto">WELDING · FABRICATION · STEELWORK</div></div></div><div class="head-contact"><div>'+address+'</div><div>'+(phone?'TEL  '+phone:'')+'</div><div>'+(email?email:'')+'</div></div><div class="head-promise">WELDED WITH<br><b>PRECISION</b><br>BUILT TO LAST</div></section>'+
+'<section class="doc-intro"><div class="intro-title"><h1>'+title+'</h1><div class="intro-sub">WELDING · FABRICATION · STRUCTURAL STEELWORK</div></div><div class="doc-meta"><div><span>'+(type==='QT'?'QUOTATION NO.':'INVOICE NO.')+'</span><b>'+no+'</b></div><div><span>DATE</span><b>'+esc(date)+'</b></div><div><span>'+(type==='QT'?'VALID UNTIL':'DUE DATE')+'</span><b>'+esc(due)+'</b></div><div><span>CURRENCY</span><b>MYR</b></div></div></section>'+
 '<section class="bill-project"><div class="bill-card"><div class="section-kicker">BILL TO</div><b class="customer-name">'+customer+'</b><div>'+custAddress+'</div>'+(esc($('phone').value)?'<div class="customer-phone">TEL  '+esc($('phone').value)+'</div>':'')+'</div><div class="project-card"><div class="section-kicker">PROJECT / WORK DETAILS</div><b>'+project+'</b><div>SINAR SAFUAN RESOURCES</div><div>WELDING · FABRICATION · SUPPLY · INSTALLATION</div></div></section>'+
 '<table class="items-table"><thead><tr><th>No.</th><th>Description</th><th>Qty</th><th>Unit</th><th>Unit Price (RM)</th><th>Amount (RM)</th></tr></thead><tbody>'+rows+'</tbody></table>'+
 '<section class="lower-grid"><div class="terms-block"><div class="section-kicker">TERMS & CONDITIONS</div><div>'+terms+'</div><div class="payment-info"><b>PAYMENT INFORMATION</b><span>'+(bank?bank+' · ':'')+(account?'A/C '+account+' · ':'')+accountName+'</span></div></div><div class="totals-block"><div class="total-line"><span>Subtotal</span><b>'+money(v.subtotal)+'</b></div><div class="total-line"><span>Discount</span><b>− '+money(v.discount)+'</b></div><div class="total-line"><span>SST</span><b>'+money(v.sst)+'</b></div><div class="grand-line"><span>GRAND TOTAL</span><b>'+money(v.total)+'</b></div><div class="total-line"><span>'+depositLine+'</span><b>'+money(v.deposit)+'</b></div>'+(type==='INV'?'<div class="total-line balance-line"><span>BALANCE DUE</span><b>'+money(v.total-v.deposit)+'</b></div>':'')+'</div></section>'+
-'<section class="signature-footer"><div class="thankyou">Thank you for the opportunity to serve you.</div><div class="prepared"><span>PREPARED BY</span>'+signature+'<div class="signature-rule"></div><b>'+company+'</b><small>Authorised Representative</small></div></section>'+
-'<footer class="doc-footer"><span>'+company+' · '+phone+'</span><b>DESIGN&nbsp;&nbsp; BUILD&nbsp;&nbsp; DELIVER</b><span>'+no+'</span></footer>';
+'<section class="signature-footer"><div class="thankyou">Precision in every weld. Strength in every structure.</div><div class="prepared"><span>PREPARED BY</span>'+signature+'<div class="signature-rule"></div><b>'+company+'</b><small>Authorised Representative</small></div></section>'+
+'<footer class="doc-footer"><span>'+company+' · '+phone+'</span><b>WELD&nbsp;&nbsp; FABRICATE&nbsp;&nbsp; INSTALL</b><span>'+no+'</span></footer>';
 p.dataset.number=no;zoom=1;applyZoom()
 }function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function applyZoom(){let w=$("previewWrap"),fit=Math.min(1,Math.max(.18,(w.clientWidth-24)/794),(Math.max(240,w.clientHeight-24)/1123));let z=fit*zoom;$("paper").style.transform="scale("+z+")";$("paper").style.marginBottom=(1123*(z-1))+"px";$("paper").style.marginLeft="auto";$("paper").style.marginRight="auto"}
