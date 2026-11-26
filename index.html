@@ -450,6 +450,45 @@ input,select,textarea{border-radius:11px;background:#fffefa;border-color:#e3dfd6
 .nav-item{border:0;background:transparent;color:#b9c2ce;display:flex;flex-direction:column;align-items:center;gap:3px;padding:3px 2px;cursor:pointer}.nav-item span{font-size:20px;line-height:22px}.nav-item small{font-size:9px;letter-spacing:.3px}.nav-item.active{color:#e6c88c}.nav-item.active span{filter:drop-shadow(0 0 5px #c69a5877)}
 @media(max-width:560px){main{padding:13px 12px 105px}.dash-hero{min-height:190px;padding:19px 17px}.hero-copy h2{font-size:17px}.hero-mark{font-size:28px}.hero-art{width:43%}.arc-one{width:135px;height:90px;right:-5px}.arc-two{width:110px;height:65px;right:8px}.primary-actions{gap:9px}.action-card{min-height:148px;padding:14px 12px}.action-card strong{font-size:13px}.quick-grid{gap:8px}.quick-card{padding:11px;min-height:85px}.dash-footer{font-size:7px}}
 @media(min-width:700px){.dash-hero{min-height:235px;padding:30px}.hero-copy h2{font-size:24px}.hero-mark{font-size:38px}.hero-art{width:55%}.primary-actions{gap:16px}.action-card{min-height:175px;padding:22px}.quick-grid{gap:14px}}
+
+/* SSR usability rebuild */
+body{background:#f3f1ec;color:#18263a}header{background:#111f35;border-bottom:2px solid #c6a36c;box-shadow:0 8px 24px #101d3218}
+.mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#fff8e8,#d7b778);color:#14233a;border:1px solid #f0d9a7;box-shadow:0 5px 14px #0002;font-size:0;position:relative}
+.mark:before{content:"";position:absolute;width:20px;height:20px;border:3px solid #14233a;border-radius:5px;transform:rotate(45deg)}
+.mark:after{content:"SSR";position:absolute;font-size:10px;letter-spacing:1px;font-weight:900;background:#f5e8ca;padding:1px 3px}
+.panel{border:1px solid #e7e1d6;box-shadow:0 8px 24px #18263a0b;border-radius:16px}
+#form>.panel{margin-bottom:14px}
+#form .panel h2,#settings h2,#payments h2{font-size:14px;letter-spacing:.02em;color:#172942}
+.field label{font-size:12px;color:#667080}
+input,select,textarea{border-radius:9px;background:#fff;border-color:#d9dce1;min-height:44px}
+.btn{border-radius:9px;font-weight:700}
+.bottom-nav{grid-template-columns:repeat(5,1fr);padding:8px 5px calc(8px + env(safe-area-inset-bottom));}
+.bottom-nav .nav-item{font-size:11px}
+.bottom-nav .nav-item span{font-size:0;width:22px;height:22px;display:block;position:relative;margin:0 auto 4px}
+.bottom-nav .nav-item span:before{font-size:19px;line-height:22px;display:block;color:currentColor}
+.bottom-nav .nav-item:nth-child(1) span:before{content:"⌂"}
+.bottom-nav .nav-item:nth-child(2) span:before{content:"▤"}
+.bottom-nav .nav-item:nth-child(3) span:before{content:"▣"}
+.bottom-nav .nav-item:nth-child(4) span:before{content:"◷"}
+.bottom-nav .nav-item:nth-child(5) span:before{content:"⚙"}
+#settings,#payments{padding-bottom:90px}
+#settings .panel,#payments .panel{margin:12px 0}
+#settings .panel h2,#payments .panel h2{padding-bottom:10px;border-bottom:1px solid #eee8dd}
+#preview.preview-fullscreen{position:fixed;inset:0;z-index:10000;background:#e9e6df;overflow:auto;width:100vw;height:100dvh;padding:10px 10px calc(12px + env(safe-area-inset-bottom));border:0;border-radius:0;box-shadow:none}
+#preview.preview-fullscreen .preview-panel{min-height:100%;display:flex;flex-direction:column;background:transparent;padding:0}
+#preview.preview-fullscreen .preview-tools{display:flex!important;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;background:#fff;border:1px solid #e1d9cc;border-radius:12px;padding:8px;position:sticky;top:0;z-index:2}
+#preview.preview-fullscreen .preview-tools .hint{display:none}
+#preview.preview-fullscreen .preview-tools>div{display:flex;gap:5px;flex-wrap:wrap}
+#preview.preview-fullscreen .preview-tools .btn{padding:9px 11px}
+#preview.preview-fullscreen .preview-wrap{flex:1;min-height:0;height:calc(100dvh - 125px);overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:8px 0;background:transparent;touch-action:none;overscroll-behavior:contain}
+#preview.preview-fullscreen .paper{flex:0 0 auto;transform-origin:top center;box-shadow:0 8px 28px #17263a22}
+#preview.preview-fullscreen .actions{position:sticky;bottom:0;background:#f7f5f0;padding:8px 0;z-index:2}
+#preview.preview-fullscreen .actions .btn{flex:1}
+#preview:not(.preview-fullscreen) .preview-tools{display:none}
+#preview:not(.preview-fullscreen) .preview-wrap{display:flex;justify-content:center;overflow:hidden;min-height:65vh}
+#preview:not(.preview-fullscreen) .paper{transform-origin:top center}
+@media(max-width:600px){main{padding:12px 12px 90px}.dashboard-screen{padding-bottom:10px}.bottom-nav{left:0;right:0}.grid{gap:9px}#preview.preview-fullscreen{padding:8px 7px calc(8px + env(safe-area-inset-bottom))}}
+
 </style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
 <main>
@@ -514,10 +553,11 @@ input,select,textarea{border-radius:11px;background:#fffefa;border-color:#e3dfd6
 <div class="panel"><h2>Dashboard syarikat</h2><div class="grid"><div class="panel"><label>Jumlah dokumen</label><div id="dashDocs" style="font-size:24px;font-weight:900">0</div></div><div class="panel"><label>Nilai dokumen</label><div id="dashValue" style="font-size:24px;font-weight:900">RM 0.00</div></div><div class="panel"><label>Quotation</label><div id="dashQT" style="font-size:24px;font-weight:900">0</div></div><div class="panel"><label>Invoice</label><div id="dashINV" style="font-size:24px;font-weight:900">0</div></div></div></div>
 <div class="panel"><h2>Rekod dokumen</h2><div class="grid"><div class="field"><label>Carian nombor / pelanggan</label><input id="historySearch" placeholder="Cari rekod..."></div><div class="field"><label>Jenis dokumen</label><select id="historyType"><option value="">Semua</option><option value="QT">Quotation</option><option value="INV">Invoice</option></select></div></div><div id="records" class="hint">Belum ada dokumen disimpan.</div></div></section>
 <nav class="bottom-nav no-print" aria-label="Navigasi utama">
-<button class="nav-item active" data-tab="dashboard"><span>⌂</span><small>Utama</small></button>
-<button class="nav-item" data-tab="form"><span>▤</span><small>Dokumen</small></button>
-<button class="nav-item" data-tab="history"><span>◷</span><small>Rekod</small></button>
-<button class="nav-item" data-jump="company"><span>⚙</span><small>Tetapan</small></button>
+<button class="nav-item active" data-tab="dashboard"><span>home</span><small>Utama</small></button>
+<button class="nav-item" data-open-doc="QT"><span>quote</span><small>Quotation</small></button>
+<button class="nav-item" data-open-doc="INV"><span>invoice</span><small>Invoice</small></button>
+<button class="nav-item" data-tab="payments"><span>receipt</span><small>Bayaran</small></button>
+<button class="nav-item" data-tab="settings"><span>settings</span><small>Tetapan</small></button>
 </nav>
 </main>
 <script>
@@ -590,7 +630,76 @@ $('payDate').value=new Date().toISOString().slice(0,10);
 function refreshPaymentDocs(){$('payDocSelect').innerHTML='<option value="">Pilih dokumen</option>'+records.map(r=>'<option value="'+esc(r.no)+'">'+esc(r.no)+' · '+esc(r.customer)+'</option>').join('')} $('payDocSelect').onchange=()=>{$('payDoc').value=$('payDocSelect').value};refreshPaymentDocs();
 function renderPayments(){let docs=[...new Set(ssrPayments.map(p=>p.doc))];$('paymentList').innerHTML=docs.map(doc=>{let list=ssrPayments.filter(p=>p.doc===doc),sum=list.reduce((a,p)=>a+(+p.amount||0),0),inv=records.find(r=>r.no===doc),bal=inv?Math.max(0,(+inv.total||0)-sum):null;return '<div style="padding:9px 0;border-bottom:1px solid #e5e8ed"><b>'+esc(doc)+'</b><br>Diterima: '+money(sum)+(bal===null?'':' · Baki: '+money(bal))+'<br>'+list.map(p=>esc(p.date)+' · '+money(p.amount)+' · '+esc(p.method)).join('<br>')+'</div>'}).join('')||'Tiada rekod bayaran.'}
 $('recordPayment').onclick=()=>{let p={doc:$('payDoc').value.trim(),date:$('payDate').value,amount:+$('payAmount').value||0,method:$('payMethod').value,note:$('payNote').value};if(!p.doc||p.amount<=0){alert('Masukkan nombor dokumen dan jumlah bayaran.');return}ssrPayments.unshift(p);setData('payments',ssrPayments);renderPayments();alert('Bayaran direkodkan.')};
-$('paymentReceipt').onclick=()=>{let p={doc:$('payDoc').value,date:$('payDate').value,amount:+$('payAmount').value||0,method:$('payMethod').value,note:$('payNote').value};if(!p.doc||!p.amount){alert('Lengkapkan maklumat bayaran dahulu.');return}let w=window.open('','_blank');w.document.write('<html><body style="font:16px Arial;padding:40px"><h2>'+esc($('company').value)+'</h2><h1>PAYMENT RECEIPT</h1><p>Document: '+esc(p.doc)+'</p><p>Date: '+esc(p.date)+'</p><p>Received: <b>'+money(p.amount)+'</b></p><p>Method: '+esc(p.method)+'</p><p>Note: '+esc(p.note)+'</p><p>Bank: '+esc($('bank').value)+' · '+esc($('account').value)+'</p><script>window.print()<\/script></body></html>');w.document.close()};
+$('paymentReceipt').onclick=()=>{let p={doc:$('payDoc').value,date:$('payDate').value,amount:+$('payAmount').value||0,method:$('payMethod').value,note:$('payNote').value};if(!p.doc||!p.amount){alert('Lengkapkan maklumat bayaran dahulu.');return}let w=window.open('','_blank');w.document.write('<html><body style="font:16px Arial;padding:40px"><h2>'+esc($('company').value)+'</h2><h1>PAYMENT RECEIPT</h1><p>Document: '+esc(p.doc)+'</p><p>Date: '+esc(p.date)+'</p><p>Received: <b>'+money(p.amount)+'</b></p><p>Method: '+esc(p.method)+'</p><p>Note: '+esc(p.note)+'</p><p>Bank: '+esc($('bank').value)+' · '+esc($('account').value)+'</p><script>window.print()<\/script>
+<script>
+/* Keep company setup, payments and backup out of document entry */
+(function(){
+ const form=document.getElementById('form');
+ const settings=document.createElement('section');settings.id='settings';settings.className='hidden';
+ settings.innerHTML='<div class="dash-heading"><div><span class="eyebrow">PREFERENCES</span><h2>Tetapan syarikat</h2><p>Urus profil, aset dan keselamatan di satu tempat</p></div></div>';
+ const payments=document.createElement('section');payments.id='payments';payments.className='hidden';
+ payments.innerHTML='<div class="dash-heading"><div><span class="eyebrow">PAYMENT MANAGEMENT</span><h2>Rekod bayaran & resit</h2><p>Rekod hanya selepas pelanggan membuat bayaran</p></div></div>';
+ const panels=[...form.querySelectorAll(':scope > .panel')];
+ const heading=p=>p.querySelector('h2')?.textContent.trim()||'';
+ const settingsTitles=['Maklumat syarikat (disimpan automatik)','Identiti syarikat & aset dokumen','Kalkulator syarikat','Backup & pemulihan data','Katalog produk & perkhidmatan','Pengurusan projek / kerja','Kunci keselamatan aplikasi'];
+ panels.forEach(p=>{
+   const h=heading(p);
+   if(h==='Bayaran & resit') payments.appendChild(p);
+   else if(settingsTitles.includes(h)) settings.appendChild(p);
+ });
+ const companyActions=[...form.querySelectorAll(':scope > .actions')].find(x=>x.querySelector('#convertInvoice'));
+ if(companyActions)settings.appendChild(companyActions);
+ const history=document.getElementById('history');
+ history.after(payments,settings);
+ // Customer address and reusable customer selector remain with document creation.
+ // Settings must never be embedded in quotation/invoice data entry.
+ const tabs=form.querySelector('.tabs');if(tabs)tabs.remove();
+ // Separate top-level routes and preserve existing document handlers.
+ document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{
+   if(b.dataset.openDoc){document.getElementById('type').value=b.dataset.openDoc;syncTemplateFields();show('form');}
+   else if(b.dataset.tab)show(b.dataset.tab);
+ }));
+ // Existing quick settings link is replaced to avoid its old form-scroll behaviour.
+ document.querySelectorAll('[data-jump]').forEach(old=>{
+   const clone=old.cloneNode(true);clone.dataset.tab='settings';clone.removeAttribute('data-jump');old.replaceWith(clone);
+   clone.addEventListener('click',()=>show('settings'));
+ });
+ const originalShow=window.show;
+ window.show=function(tab){
+   ['dashboard','form','preview','history','payments','settings'].forEach(id=>document.getElementById(id)?.classList.toggle('hidden',id!==tab));
+   document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',(x.dataset.tab===tab)||(tab==='form'&&x.dataset.openDoc===document.getElementById('type').value)));
+   if(tab==='history')showRecords();
+   if(tab==='preview'){
+     const panel=document.querySelector('.preview-panel');
+     document.getElementById('preview').classList.add('preview-fullscreen');
+     panel.classList.add('is-fullscreen');
+     document.body.style.overflow='hidden';
+     document.getElementById('fullscreenToggle').textContent='Tutup';
+     setTimeout(applyZoom,80);
+   }else{
+     document.getElementById('preview').classList.remove('preview-fullscreen');
+     document.querySelector('.preview-panel').classList.remove('is-fullscreen');
+     document.body.style.overflow='';
+   }
+   window.scrollTo({top:0,behavior:'instant'});
+ };
+ // Open preview immediately in fitted fullscreen; no extra tap needed.
+ document.getElementById('make').addEventListener('click',()=>{setTimeout(()=>{window.show('preview');},0)});
+ document.getElementById('fullscreenToggle').onclick=()=>window.show('form');
+ document.getElementById('back').onclick=()=>window.show('form');
+ document.getElementById('print').textContent='Simpan / Muat Turun PDF';
+ // Two-finger pinch zoom with a sensible fitted default.
+ const wrap=document.getElementById('previewWrap');let pinchStart=0,pinchZoom=1;
+ const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+ wrap.addEventListener('touchstart',e=>{if(e.touches.length===2){e.preventDefault();pinchStart=dist(e.touches);pinchZoom=zoom;}},{passive:false});
+ wrap.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinchStart){e.preventDefault();zoom=Math.max(.65,Math.min(3.2,pinchZoom*dist(e.touches)/pinchStart));applyZoom();}},{passive:false});
+ wrap.addEventListener('touchend',()=>{if(!wrap.matches(':active'))pinchStart=0;},{passive:true});
+ // Restore fit-to-page button after any pinch and make zoom reset predictable.
+ document.getElementById('fitPage').onclick=()=>{zoom=1;applyZoom();wrap.scrollTo({top:0,left:0,behavior:'smooth'});};
+ // Print bridge opens Android's system PDF destination chooser, where Save as PDF stores it on-device.
+})();
+</script>
+</body></html>');w.document.close()};
 renderPayments();
 $('backup').onclick=()=>{saveProfile();let data={version:1,profile:getData('profile'),assets:ssrAssets,customers:ssrCustomers,payments:ssrPayments,records:records,sequence:Object.keys(localStorage).filter(k=>k.startsWith('ssr_seq_')).reduce((o,k)=>(o[k]=localStorage.getItem(k),o),{})};let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='SSR-Backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href)};
 $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;try{let d=JSON.parse(await file.text());if(!d||d.version!==1)throw Error('Format backup tidak sah');if(!confirm('Pulihkan backup? Data semasa akan digantikan.'))return;localStorage.clear();if(d.profile)setData('profile',d.profile);if(d.assets)setData('assets',d.assets);if(d.customers)setData('customers',d.customers);if(d.payments)setData('payments',d.payments);if(d.records)setData('records',d.records);Object.entries(d.sequence||{}).forEach(([k,v])=>localStorage.setItem(k,v));alert('Backup dipulihkan. Muat semula aplikasi.');location.reload()}catch(err){alert('Gagal pulihkan backup: '+err.message)}};
