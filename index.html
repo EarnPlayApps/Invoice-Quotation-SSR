@@ -462,7 +462,7 @@ body{background:#f3f1ec;color:#18263a}header{background:#111f35;border-bottom:2p
 .field label{font-size:12px;color:#667080}
 input,select,textarea{border-radius:9px;background:#fff;border-color:#d9dce1;min-height:44px}
 .btn{border-radius:9px;font-weight:700}
-.bottom-nav{grid-template-columns:repeat(5,1fr);padding:8px 5px calc(8px + env(safe-area-inset-bottom));}
+.bottom-nav{grid-template-columns:repeat(6,1fr);padding:8px 5px calc(8px + env(safe-area-inset-bottom));}
 .bottom-nav .nav-item{font-size:11px}
 .bottom-nav .nav-item span{font-size:0;width:22px;height:22px;display:block;position:relative;margin:0 auto 4px}
 .bottom-nav .nav-item span:before{font-size:19px;line-height:22px;display:block;color:currentColor}
@@ -627,6 +627,7 @@ input,select,textarea{border-radius:9px;background:#fff;border-color:#d9dce1;min
 <button class="nav-item" data-open-doc="QT"><span>quote</span><small>Quotation</small></button>
 <button class="nav-item" data-open-doc="INV"><span>invoice</span><small>Invoice</small></button>
 <button class="nav-item" data-tab="payments"><span>receipt</span><small>Bayaran</small></button>
+<button class="nav-item" data-tab="tools"><span>tools</span><small>Alat</small></button>
 <button class="nav-item" data-tab="settings"><span>settings</span><small>Tetapan</small></button>
 </nav>
 </main>
@@ -743,21 +744,24 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
 (function(){
  const form=document.getElementById('form');
  const settings=document.createElement('section');settings.id='settings';settings.className='hidden';
- settings.innerHTML='<div class="dash-heading"><div><span class="eyebrow">PREFERENCES</span><h2>Tetapan syarikat</h2><p>Urus profil, aset dan keselamatan di satu tempat</p></div></div>';
+ settings.innerHTML='<div class="dash-heading"><div><span class="eyebrow">PREFERENCES</span><h2>Tetapan syarikat</h2><p>Profil, identiti, backup dan keselamatan</p></div></div>';
+ const tools=document.createElement('section');tools.id='tools';tools.className='hidden';tools.innerHTML='<div class="dash-heading"><div><span class="eyebrow">BUSINESS TOOLS</span><h2>Alat perniagaan</h2><p>Kalkulator, katalog dan pengurusan projek</p></div></div>';
  const payments=document.createElement('section');payments.id='payments';payments.className='hidden';
  payments.innerHTML='<div class="dash-heading"><div><span class="eyebrow">PAYMENT MANAGEMENT</span><h2>Rekod bayaran & resit</h2><p>Rekod hanya selepas pelanggan membuat bayaran</p></div></div>';
  const panels=[...form.querySelectorAll(':scope > .panel')];
  const heading=p=>p.querySelector('h2')?.textContent.trim()||'';
- const settingsTitles=['Maklumat syarikat (disimpan automatik)','Identiti syarikat & aset dokumen','Kalkulator syarikat','Backup & pemulihan data','Katalog produk & perkhidmatan','Pengurusan projek / kerja','Kunci keselamatan aplikasi'];
+ const settingsTitles=['Maklumat syarikat (disimpan automatik)','Identiti syarikat & aset dokumen','Backup & pemulihan data','Kunci keselamatan aplikasi'];
+ const toolTitles=['Kalkulator syarikat','Katalog produk & perkhidmatan','Pengurusan projek / kerja'];
  panels.forEach(p=>{
    const h=heading(p);
    if(h==='Bayaran & resit') payments.appendChild(p);
    else if(settingsTitles.includes(h)) settings.appendChild(p);
+   else if(toolTitles.includes(h)) tools.appendChild(p);
  });
  const companyActions=[...form.querySelectorAll(':scope > .actions')].find(x=>x.querySelector('#convertInvoice'));
  if(companyActions)form.appendChild(companyActions);
  const history=document.getElementById('history');
- history.after(payments,settings);
+ history.after(payments,tools,settings);
  // Customer address and reusable customer selector remain with document creation.
  // Settings must never be embedded in quotation/invoice data entry.
  const tabs=form.querySelector('.tabs');if(tabs)tabs.remove();
@@ -768,12 +772,12 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  }));
  // Existing quick settings link is replaced to avoid its old form-scroll behaviour.
  document.querySelectorAll('[data-jump]').forEach(old=>{
-   const clone=old.cloneNode(true);clone.dataset.tab='settings';clone.removeAttribute('data-jump');old.replaceWith(clone);
-   clone.addEventListener('click',()=>show('settings'));
+   const clone=old.cloneNode(true);const destination=old.dataset.jump==='calculator'?'tools':old.dataset.jump==='company'?'settings':'form';clone.dataset.tab=destination;clone.removeAttribute('data-jump');old.replaceWith(clone);
+   clone.addEventListener('click',()=>show(destination));
  });
  const originalShow=window.show;
  window.show=function(tab){
-   ['dashboard','form','preview','history','payments','settings'].forEach(id=>document.getElementById(id)?.classList.toggle('hidden',id!==tab));
+   ['dashboard','form','preview','history','payments','tools','settings'].forEach(id=>document.getElementById(id)?.classList.toggle('hidden',id!==tab));
    document.querySelectorAll('.nav-item').forEach(x=>x.classList.toggle('active',(x.dataset.tab===tab)||(tab==='form'&&x.dataset.openDoc===document.getElementById('type').value)));
    if(tab==='history')showRecords();
    if(tab==='preview'){
