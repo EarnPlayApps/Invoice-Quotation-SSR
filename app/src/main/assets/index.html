@@ -712,6 +712,42 @@ header .brand{gap:12px}.mark{background:linear-gradient(145deg,#f8e7c2,#b98b48);
 .quick-card b{font-size:11px;color:#162b45}.quick-card small{font-size:8px;line-height:1.25}
 .dash-footer{border-color:#c6a36c;color:#80663d;font-size:7px}
 @media(max-width:560px){.dash-hero{min-height:218px;padding:18px 15px}.hero-copy{max-width:62%}.hero-mark{font-size:32px}.hero-copy h2{font-size:16px}.hero-art{width:54%;right:-4px}.quick-grid{gap:8px}.quick-card{min-height:73px}.action-card{min-height:132px}}
+
+/* Unified SSR application visual system */
+:root{--navy:#102b49;--navy2:#1c3d5d;--gold:#c9a15c;--gold2:#e6ca95;--paper:#f6f2e9;--ink:#1c2c3d;--muted:#738092;--line:#d9e0e7}
+body{background:linear-gradient(150deg,#e9edf1,#f5f2eb 52%,#e5eaf0);color:#1c2c3d}
+header{background:linear-gradient(110deg,#07172a,#123657 65%,#1c4567);border-bottom:2px solid #c9a15c}
+main{max-width:900px;padding:14px 13px 90px}
+.panel{border:1px solid #d8c7a5;border-radius:17px;background:linear-gradient(145deg,#fffefa,#f4f1e9);box-shadow:0 9px 25px #102b4910;padding:16px}
+.panel h2{font-size:15px;letter-spacing:.15px;color:#102b49}
+label{color:#53667a;font-size:12px}
+input,select,textarea{border:1px solid #d3dbe3;background:#fffefa;border-radius:11px;min-height:43px}
+input:focus,select:focus,textarea:focus{border-color:#c9a15c;box-shadow:0 0 0 3px #c9a15c24}
+.btn{border-radius:11px;font-weight:750;min-height:42px}
+.btn.primary{background:linear-gradient(135deg,#c9a15c,#ead29e);color:#172b42;box-shadow:0 4px 12px #9c793c25}
+.btn.dark,.tab.active{background:linear-gradient(135deg,#102b49,#1d4669);color:white}
+.btn.soft{background:#e9edf1;color:#243a50;border:1px solid #d4dce4}
+.tabs{gap:7px}.tab{border-radius:11px;background:#fffefa;border:1px solid #d8c7a5}
+.template-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.template-choice{border:1px solid #d6c7aa;border-radius:14px;background:#fffefa;padding:10px}
+.template-choice.selected{border:2px solid #c49a58;box-shadow:0 0 0 3px #c49a5826}
+.template-thumb{height:166px;background:var(--thumb-bg);border:1px solid var(--thumb-accent);border-radius:5px}
+.template-thumb .mini-head{background:var(--thumb-head);border-bottom:4px solid var(--thumb-accent)}
+.template-choice>b{display:block;color:#152e49;margin-top:8px;font-size:12px}
+.template-choice>small{display:block;color:#718092;font-size:10px;margin-top:2px}
+#templatePickerPanel{border-top:3px solid #c9a15c}
+#form>.panel:first-child{border-left:4px solid #c9a15c}
+#customerPanel,#companyPanel{scroll-margin-top:90px}
+.customer-directory,.preview-panel{border-color:#d5c29b}
+.bottom-nav{background:linear-gradient(110deg,#07172a,#123657);border-top:1px solid #c9a15c}
+.nav-item{color:#d8e0e8}.nav-item.active{color:#f1d49a}
+.paper{--head:#102b49;--accent:#c9a15c;--pale:#f5f1e8}
+.paper .doc-head{background:var(--head);border-bottom-color:var(--accent)}
+.paper .intro-title h1,.paper .customer-name,.paper .project-card>b,.paper .grand-line{color:var(--head)}
+.paper .items-table th,.paper .doc-footer{background:var(--head)}
+.paper .section-kicker{color:var(--accent)}
+.paper .grand-line{background:var(--accent)}
+@media(max-width:560px){main{padding:10px 10px 88px}.panel{padding:13px}.template-gallery{gap:8px}.template-thumb{height:145px}.template-choice{padding:8px}}
 </style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>SSR INVOICE &amp; QUOTATION</h1><small>BUILD · FABRICATE · DELIVER</small></div></div></header>
 <main>
@@ -722,7 +758,7 @@ header .brand{gap:12px}.mark{background:linear-gradient(145deg,#f8e7c2,#b98b48);
   </div>
   <div class="dash-heading"><div><span class="eyebrow">WORKSPACE</span><h2>Menu Utama</h2><p>Semua urusan perniagaan dalam satu aplikasi</p></div><span class="live-mark">SSR</span></div>
   <div class="primary-actions">
-    <button class="action-card quote-card" data-open-doc="QT"><span class="action-icon">▤</span><span class="action-label">QUOTATION</span><strong>Buat Quotation</strong><small>12 template profesional A4</small><span class="action-arrow">›</span></button>
+    <button class="action-card quote-card" data-open-doc="QT"><span class="action-icon">▤</span><span class="action-label">QUOTATION</span><strong>Buat Quotation</strong><small>1 template · 5 warna</small><span class="action-arrow">›</span></button>
     <button class="action-card invoice-card" data-open-doc="INV"><span class="action-icon">＄</span><span class="action-label">INVOICE</span><strong>Buat Invoice</strong><small>12 template profesional A4</small><span class="action-arrow">›</span></button>
   </div>
   <div class="quick-grid">
@@ -737,7 +773,7 @@ header .brand{gap:12px}.mark{background:linear-gradient(145deg,#f8e7c2,#b98b48);
 </section>
 <div class="tabs no-print"><button class="tab active" data-tab="form">Maklumat</button><button class="tab" data-tab="preview">Preview A4</button><button class="tab" data-tab="history">Rekod</button></div>
 <section id="form" class="hidden">
-<div class="panel"><h2>Jenis dokumen</h2><div class="grid"><div class="field"><label>Dokumen</label><select id="type"><option value="QT">Quotation</option><option value="INV">Invoice</option></select></div><div class="field" id="quotationTemplateField"><label>12 Design Quotation</label><select id="quotationTemplate"></select></div><div class="field hidden" id="invoiceTemplateField"><label>12 Design Invoice</label><select id="invoiceTemplate"></select></div></div></div>
+<div class="panel"><h2>Jenis dokumen</h2><div class="grid"><div class="field"><label>Dokumen</label><select id="type"><option value="QT">Quotation</option><option value="INV">Invoice</option></select></div><div class="field" id="quotationTemplateField"><label>Warna Quotation</label><select id="quotationTemplate"></select></div><div class="field hidden" id="invoiceTemplateField"><label>Warna Invoice</label><select id="invoiceTemplate"></select></div></div></div>
 <div class="panel" id="customerPanel"><h2>Maklumat pelanggan</h2><div class="grid">
 <div class="field full"><label>Nama pelanggan / syarikat</label><input id="customer" placeholder="Nama pelanggan"></div>
 <div class="field"><label>No. pendaftaran</label><input id="reg" placeholder="Jika berkaitan"></div><div class="field"><label>No. telefon</label><input id="phone" placeholder="01X-XXXXXXX"></div>
@@ -789,7 +825,7 @@ header .brand{gap:12px}.mark{background:linear-gradient(145deg,#f8e7c2,#b98b48);
 </main>
 <script>
 const $=id=>document.getElementById(id);let zoom=1,records=JSON.parse(localStorage.getItem('ssr_records')||'[]'),seq={QT:1,INV:1};
-const templateNames=["01 · Arc Weld Navy","02 · Blue Steel Pro","03 · Royal Fabrication","04 · Graphite Precision","05 · Ivory Workshop","06 · Champagne Craft","07 · Silverline Engineering","08 · Copper Forge","09 · Obsidian Gold","10 · Platinum Industrial","11 · Midnight Arc","12 · Signature Foundry"];for(let i=1;i<=12;i++){let label=String(i).padStart(2,"0")+" · "+templateNames[i-1];for(const id of ["quotationTemplate","invoiceTemplate"]){let o=document.createElement("option");o.value=i;o.textContent=label;$(id).append(o)}}function templateSelect(){return $("type").value==="INV"?$("invoiceTemplate"):$("quotationTemplate")}function syncTemplateFields(){let inv=$("type").value==="INV";$("invoiceTemplateField").classList.toggle("hidden",!inv);$("quotationTemplateField").classList.toggle("hidden",inv)}$("type").addEventListener("change",syncTemplateFields);syncTemplateFields();
+const templateNames=["SSR Steel Navy","Champagne Gold","Graphite Silver","Industrial Blue","Copper Forge"];for(let i=1;i<=5;i++){let label=templateNames[i-1];for(const id of ["quotationTemplate","invoiceTemplate"]){let o=document.createElement("option");o.value=i;o.textContent=label;$(id).append(o)}}function templateSelect(){return $("type").value==="INV"?$("invoiceTemplate"):$("quotationTemplate")}function syncTemplateFields(){let inv=$("type").value==="INV";$("invoiceTemplateField").classList.toggle("hidden",!inv);$("quotationTemplateField").classList.toggle("hidden",inv)}$("type").addEventListener("change",syncTemplateFields);syncTemplateFields();
 $('date').value=new Date().toISOString().slice(0,10);$('due').value=new Date(Date.now()+30*86400000).toISOString().slice(0,10);
 function money(n){return 'RM '+Number(n||0).toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2})}
 function addItem(desc='',qty=1,price=0){let d=document.createElement('div');d.className='item';d.innerHTML='<div class="field"><label>Butiran</label><input class="desc" placeholder="Contoh: Kerja fabrikasi" value="'+String(desc).replace(/"/g,'&quot;')+'"></div><div class="field"><label>Kuantiti</label><input class="qty" type="number" min="0" step="any" value="'+qty+'"></div><div class="field"><label>Harga (RM)</label><input class="price" type="number" min="0" step=".01" value="'+price+'"></div><button class="btn danger remove" aria-label="Buang">×</button>';d.querySelectorAll('input').forEach(x=>x.addEventListener('input',calc));d.querySelector('.remove').onclick=()=>{d.remove();calc()};$('items').append(d);calc()}
@@ -800,7 +836,10 @@ $('add').onclick=()=>addItem();addItem();
 function docNo(type){let day=($('date').value||new Date().toISOString().slice(0,10)).replaceAll('-','');let key='ssr_seq_'+type+'_'+day;let n=+(localStorage.getItem(key)||0)+1;return 'SSR-'+type+'-'+day+'-'+String(n).padStart(3,'0')}
 function render(){
 let v=values(),type=$('type').value,no=docNo(type),date=$('date').value,due=$('due').value,p=$('paper');
-p.className='paper '+(type==='INV'?'invoice-template-':'template-')+templateSelect().value;
+const colorIndex=Math.max(1,Math.min(5,Number(templateSelect().value)||1));
+const colorSet=[['#102b49','#c9a15c','#f5f1e8'],['#20232b','#d2ad69','#f7f2e8'],['#454d57','#b7c0c8','#f4f5f5'],['#17445c','#72a8c4','#edf4f7'],['#49372b','#c27b4e','#fbf2e8']][colorIndex-1];
+p.className='paper template-1 invoice-template-1';
+p.style.setProperty('--head',colorSet[0]);p.style.setProperty('--accent',colorSet[1]);p.style.setProperty('--pale',colorSet[2]);
 let title=type==='QT'?'QUOTATION':'INVOICE';
 let company=esc($('company').value),address=esc($('companyAddress').value).replaceAll('\\n','<br>');
 let phone=esc($('companyPhone').value),email=$('companyEmail')?esc($('companyEmail').value):'';
@@ -1007,26 +1046,24 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  const actionBar=form.querySelector(':scope > .actions');if(actionBar)form.append(actionBar);
  const typePanel=form.querySelector(':scope > .panel');
  const templatePanel=document.createElement('div');templatePanel.className='panel';templatePanel.id='templatePickerPanel';
- templatePanel.innerHTML='<h2>Pilih reka bentuk dokumen</h2><p class="hint">Pilih berdasarkan rupa A4. Setiap reka bentuk ada susun atur dan warna tersendiri.</p><div id="templateGallery" class="template-gallery"></div>';
+ templatePanel.innerHTML='<h2>Pilih warna template A4</h2><p class="hint">Satu susun atur profesional untuk Quotation dan Invoice. Pilih satu daripada lima warna.</p><div id="templateGallery" class="template-gallery"></div>';
  if(typePanel)typePanel.after(templatePanel);
  // Hide text-only select controls; keep their values as the source of truth.
  $('quotationTemplateField').classList.add('hidden');$('invoiceTemplateField').classList.add('hidden');
  const palette=[
- ['#14243b','#c6a16a','#f5f1e8','Navy & Champagne','Corporate welding'],
- ['#17445c','#68a6bd','#eef5f7','Blue Steel','Modern fabrication'],
- ['#222a38','#b58c4d','#f5f1e8','Royal Foundry','Premium workshop'],
- ['#454b53','#9ba3aa','#f4f4f2','Graphite','Precision engineering'],
- ['#604b37','#b58c59','#faf6ee','Ivory Workshop','Clean industrial'],
- ['#253d38','#b89d6c','#f3efe5','Champagne Craft','Luxury metalwork'],
- ['#354453','#aeb8c0','#f7f7f4','Silverline','Steel engineering'],
- ['#5b392b','#bd7549','#f8eee6','Copper Forge','Welding specialist'],
- ['#f2eee5','#c7a66c','#171c24','Obsidian Gold','Black luxury'],
- ['#283d53','#aeb9c7','#edf1f4','Platinum','Executive industrial'],
- ['#183344','#62a2a0','#eef3f2','Midnight Arc','Arc welding'],
- ['#443a31','#b9a17a','#f7f4ed','Signature','Bespoke fabrication']
+ ['#102b49','#c9a15c','#f5f1e8','Steel Navy','Navy metalik'],
+ ['#20232b','#d2ad69','#f7f2e8','Champagne Gold','Hitam dan emas'],
+ ['#454d57','#b7c0c8','#f4f5f5','Graphite Silver','Keluli grafit'],
+ ['#17445c','#72a8c4','#edf4f7','Industrial Blue','Biru industri'],
+ ['#49372b','#c27b4e','#fbf2e8','Copper Forge','Tembaga welding']
  ];
  const gallery=$('templateGallery');
- function paintGallery(){const sel=+($(('type').value==='INV'?'invoiceTemplate':'quotationTemplate').value||1);const typeLabel=$('type').value==='INV'?'INVOICE':'QUOTATION';gallery.innerHTML=palette.map((p,i)=>{const n=i+1;return '<button type="button" class="template-choice '+(sel===n?'selected':'')+'" data-template="'+n+'" style="--thumb-head:'+p[0]+';--thumb-accent:'+p[1]+';--thumb-bg:'+p[2]+';--thumb-ink:'+p[0]+'"><div class="template-thumb mini-layout mini-'+n+'"><div class="mini-head"><span class="mini-logo">SSR</span><span class="mini-company"><i></i><i></i></span><span class="mini-doc">'+typeLabel+'</span></div><div class="mini-contact"><i></i><i></i><i></i></div><div class="mini-meta"><i></i><i></i></div><div class="mini-bill"><i></i><i></i><i></i></div><div class="mini-table"><div class="mini-th"></div><i></i><i></i><i></i></div><div class="mini-total"><i></i><b></b></div><div class="mini-sign"></div></div><b>'+p[3]+'</b><small>'+p[4]+'</small></button>'}).join('')}
+ function paintGallery(){
+   const target=$('type').value==='INV'?'invoiceTemplate':'quotationTemplate';
+   const sel=+(($(target).value)||1);
+   const typeLabel=$('type').value==='INV'?'INVOICE':'QUOTATION';
+   gallery.innerHTML=palette.map((p,i)=>{const n=i+1;return '<button type="button" class="template-choice '+(sel===n?'selected':'')+'" data-template="'+n+'" style="--thumb-head:'+p[0]+';--thumb-accent:'+p[1]+';--thumb-bg:'+p[2]+';--thumb-ink:'+p[0]+'"><div class="template-thumb mini-layout mini-1"><div class="mini-head"><span class="mini-logo">SSR</span><span class="mini-company"><i></i><i></i></span><span class="mini-doc">'+typeLabel+'</span></div><div class="mini-contact"><i></i><i></i><i></i></div><div class="mini-meta"><i></i><i></i></div><div class="mini-bill"><i></i><i></i><i></i></div><div class="mini-table"><div class="mini-th"></div><i></i><i></i><i></i></div><div class="mini-total"><i></i><b></b></div><div class="mini-sign"></div></div><b>'+p[3]+'</b><small>'+p[4]+'</small></button>'}).join('')
+ }
  gallery.addEventListener('click',e=>{const b=e.target.closest('[data-template]');if(!b)return;const target=$('type').value==='INV'?'invoiceTemplate':'quotationTemplate';$(target).value=b.dataset.template;paintGallery();});
  $('type').addEventListener('change',paintGallery);$('quotationTemplate').addEventListener('change',paintGallery);$('invoiceTemplate').addEventListener('change',paintGallery);paintGallery();
  // Dedicated route controller; tapping a destination always opens that destination.
