@@ -79,6 +79,62 @@
 .paper.template-12 .grand{color:#8d252c!important;border-color:#b33e43!important}
 @media(max-width:560px){.paper.template-3 .top{margin:-28px -22px 20px}.paper.template-10 .top,.paper.template-12 .top{margin:-28px -22px 20px}.paper.template-2 .top,.paper.template-5 .top,.paper.template-8 .top{margin:-28px -22px 20px}}
 
+
+/* Reference-led SSR A4 quotation system */
+.paper{background:#fffdf8;color:#17243a;padding:0 36px 30px;min-height:1123px;font-family:Georgia,'Times New Roman',serif;border:0;overflow:hidden}
+.paper:after{display:none}
+.paper .top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 -36px 0;padding:24px 36px 20px;background:var(--head,#071d38);color:#fff;border:0;border-bottom:5px solid var(--accent,#c69a45);min-height:142px}
+.paper .brand-block{display:flex;align-items:center;gap:14px;min-width:0}
+.paper .ssr-mark{width:94px;height:58px;display:grid;place-items:center;border:3px solid var(--accent,#c69a45);border-radius:50%;font:italic 900 31px Arial,sans-serif;color:var(--accent,#c69a45);letter-spacing:-3px;flex:none;box-shadow:inset 0 0 0 2px #ffffff25}
+.paper .company{font: bold 23px Georgia,serif;letter-spacing:1.5px;color:#fff;line-height:1.05}
+.paper .sub{color:#e8edf5;font:10px/1.6 Arial,sans-serif;margin-top:8px;max-width:340px}
+.paper .tagline{font:italic 10px Arial,sans-serif;color:var(--accent,#c69a45);letter-spacing:1.8px;margin-top:6px}
+.paper .doc-title{text-align:right;color:var(--accent,#e7c77f);font:bold 29px Georgia,serif;letter-spacing:2px}
+.paper .doc-no{color:#fff;font:11px/1.8 Arial,sans-serif;margin-top:8px;text-align:right}
+.paper .contact-strip{display:flex;justify-content:space-between;gap:20px;padding:13px 2px 16px;border-bottom:1px solid var(--accent,#c69a45);font:10px/1.6 Arial,sans-serif;color:#27344a}
+.paper .contact-strip .slogan{font:bold italic 15px Georgia,serif;color:var(--head,#071d38);max-width:210px;text-align:right;align-self:center}
+.paper .ribbon{margin:16px auto 20px;width:max-content;max-width:90%;padding:8px 38px;background:var(--head,#071d38);color:var(--accent,#e7c77f);border:2px solid var(--accent,#c69a45);border-radius:5px 22px 5px 22px;font:bold 25px Georgia,serif;letter-spacing:2px;text-align:center}
+.paper .meta{display:grid;grid-template-columns:1.25fr .9fr;gap:18px;margin:0 0 18px;padding:0;border:0}
+.paper .meta>div{font:12px/1.75 Georgia,serif;padding:12px 14px;border:1px solid #d9c79f;border-radius:10px;background:#fffefa;min-width:0}
+.paper .meta b{display:block;margin:-12px -14px 9px;padding:8px 12px;background:var(--head,#071d38);color:white;border-radius:9px 9px 0 0;font:bold 13px Georgia,serif;letter-spacing:.3px;text-transform:none}
+.paper .meta .doc-meta b{background:var(--head,#071d38)}
+.paper table{margin:0;width:100%;border-collapse:collapse;font:11px Georgia,serif;border:1px solid #9da6b2}
+.paper th{background:var(--head,#071d38);color:#fff;padding:10px 7px;text-align:center;font:bold 12px Georgia,serif;border-right:1px solid var(--accent,#c69a45)}
+.paper td{padding:10px 7px;border:1px solid #c9cbd0;color:#17243a}
+.paper td:first-child{text-align:center;width:7%}
+.paper td:nth-child(2){text-align:left;width:42%}
+.paper td:nth-child(n+3){text-align:right}
+.paper tbody tr:nth-child(even){background:#f5f0e6}
+.paper .sum{width:43%;margin:14px 0 0 auto;padding:0;border:1px solid var(--accent,#c69a45);border-radius:8px;overflow:hidden;font:12px Georgia,serif}
+.paper .sum div{padding:6px 12px;display:flex;justify-content:space-between;background:var(--head,#071d38);color:#fff;border-bottom:1px solid #ffffff30}
+.paper .sum .grand{margin:0;padding:10px 12px;background:linear-gradient(100deg,var(--accent,#c69a45),#f5dfa5);color:#17243a!important;border:0;font:bold 17px Georgia,serif}
+.paper .notes{margin-top:22px;padding-top:10px;border-top:2px solid var(--accent,#c69a45);font:11px/1.65 Georgia,serif;color:#263246}
+.paper .notes b{display:block;background:var(--head,#071d38);color:#fff;padding:7px 12px;border-radius:8px 24px 0 0;width:max-content;max-width:100%;margin-bottom:8px;font: bold 13px Georgia,serif}
+.paper .sign-row{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:28px;font:bold 12px Georgia,serif}
+.paper .sign-row>div{padding-top:5px}
+.paper .sign-line{border-top:1px solid #6f7783;margin-top:38px;padding-top:7px;font:10px Arial,sans-serif}
+.paper .signature{display:none}
+.paper .foot{margin:28px -36px -30px;padding:22px 36px 18px;background:var(--head,#071d38);color:#fff;border-top:6px solid var(--accent,#c69a45);font:italic 11px Georgia,serif;text-align:center;display:block}
+.paper .foot span{display:block}
+.paper.template-1{--head:#071d38;--accent:#c69a45;background:#fffdf8}
+.paper.template-2{--head:#123d35;--accent:#b8a16a;background:#fbfdf9}
+.paper.template-3{--head:#123c70;--accent:#75b7e8;background:#f9fcff}
+.paper.template-4{--head:#64263a;--accent:#d6a4a9;background:#fffafb}
+.paper.template-5{--head:#42285f;--accent:#c5a4e8;background:#fcfaff}
+.paper.template-6{--head:#075b63;--accent:#65c4c4;background:#f8fdfd}
+.paper.template-7{--head:#303944;--accent:#aeb8c4;background:#fff}
+.paper.template-8{--head:#813e27;--accent:#d89b70;background:#fffaf6}
+.paper.template-9{--head:#344d67;--accent:#9db4c9;background:#fbfcfe}
+.paper.template-10{--head:#101722;--accent:#d6ad58;background:#fffdf6}
+.paper.template-11{--head:#294b32;--accent:#9cbd83;background:#fbfdf8}
+.paper.template-12{--head:#842b32;--accent:#e4a6a2;background:#fffafa}
+.paper.template-2 .top,.paper.template-5 .top,.paper.template-8 .top{border-radius:0 0 28px 0}
+.paper.template-3 .top{flex-direction:row}
+.paper.template-4 .ribbon,.paper.template-7 .ribbon{border-radius:0}
+.paper.template-6 .ribbon,.paper.template-11 .ribbon{border-radius:24px}
+.paper.template-9 .top{border-bottom-style:double;border-bottom-width:8px}
+.paper.template-10 .top,.paper.template-12 .top{box-shadow:inset 0 -2px 0 #ffffff20}
+@media(max-width:560px){.paper{padding:0 22px 24px}.paper .top{margin:0 -22px;padding:20px 22px;gap:10px;min-height:125px}.paper .ssr-mark{width:66px;height:44px;font-size:23px}.paper .company{font-size:17px}.paper .doc-title{font-size:21px}.paper .doc-no{font-size:9px}.paper .contact-strip{font-size:9px}.paper .contact-strip .slogan{font-size:12px}.paper .ribbon{font-size:20px;padding:7px 20px}.paper .meta{grid-template-columns:1fr 1fr;gap:8px}.paper .meta>div{font-size:10px;padding:9px}.paper .meta b{margin:-9px -9px 7px;padding:7px;font-size:11px}.paper table{font-size:9px}.paper th{font-size:10px;padding:7px 3px}.paper td{padding:7px 3px}.paper .sum{width:58%;font-size:10px}.paper .sum .grand{font-size:14px}.paper .notes{font-size:9px}.paper .sign-row{gap:25px;font-size:10px}.paper .foot{margin:22px -22px -24px;padding:18px 22px}}
 </style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
 <main><div class="tabs no-print"><button class="tab active" data-tab="form">Maklumat</button><button class="tab" data-tab="preview">Preview A4</button><button class="tab" data-tab="history">Rekod</button></div>
@@ -135,8 +191,7 @@ function calc(){$('total').textContent=money(values().total)}
 $('add').onclick=()=>addItem();addItem();
 ['discount','sst','deposit'].forEach(id=>$(id).addEventListener('input',calc));
 function docNo(type){let day=($('date').value||new Date().toISOString().slice(0,10)).replaceAll('-','');let key='ssr_seq_'+type+'_'+day;let n=+(localStorage.getItem(key)||0)+1;return 'SSR-'+type+'-'+day+'-'+String(n).padStart(3,'0')}
-function render(){let v=values(),type=$('type').value,no=docNo(type),date=$('date').value,due=$('due').value;let p=$('paper');p.className='paper template-'+$('template').value;let rows=v.lines.map((x,i)=>'<tr><td>'+(i+1)+'. '+esc(x.desc)+'</td><td>'+x.qty+'</td><td>'+money(x.price)+'</td><td>'+money(x.qty*x.price)+'</td></tr>').join('');p.innerHTML='<div class="top"><div><div class="company">'+esc($('company').value)+'</div><div class="sub">'+esc($('companyAddress').value).replaceAll('\n','<br>')+'<br>SSM: '+esc($('companyReg').value)+'<br>Tel: '+esc($('companyPhone').value)+'</div></div><div><div class="doc-title">'+(type==='QT'?'QUOTATION':'INVOICE')+'</div><div class="doc-no">'+no+'<br>Tarikh: '+date+'<br>'+(type==='QT'?'Sah sehingga: ':'Tarikh akhir: ')+due+'</div></div></div><div class="meta"><div><b>Bill To / Pelanggan</b>'+esc($('customer').value||'—')+'<br>'+esc($('reg').value)+'<br>'+esc($('phone').value)+'<br>'+esc($('address').value).replaceAll('\n','<br>')+'</div><div><b>Payment Details</b>'+esc($('bank').value)+'<br>A/C: '+esc($('account').value)+'<br>'+esc($('accountName').value)+'</div></div><table><thead><tr><th>DESCRIPTION</th><th>QTY</th><th>UNIT PRICE</th><th>AMOUNT</th></tr></thead><tbody>'+rows+'</tbody></table><div class="sum"><div><span>Subtotal</span><b>'+money(v.subtotal)+'</b></div><div><span>Discount</span><b>− '+money(v.discount)+'</b></div><div><span>SST</span><b>'+money(v.sst)+'</b></div><div class="grand"><span>TOTAL</span><b>'+money(v.total)+'</b></div>'+(type==='QT'?'<div><span>Deposit ('+($('deposit').value||0)+'%)</span><b>'+money(v.deposit)+'</b></div>':'<div><span>Deposit received</span><b>'+money(v.deposit)+'</b></div><div><span>Balance</span><b>'+money(v.total-v.deposit)+'</b></div>')+'</div><div class="notes"><b>TERMS & CONDITIONS</b><br>'+esc($('terms').value)+'<br><br>All payments to: '+esc($('bank').value)+' · '+esc($('account').value)+' · '+esc($('accountName').value)+'</div><div class="signature">For '+esc($('company').value)+'<span>Authorised Signature</span></div><div class="foot"><span>'+no+'</span><span>'+esc($('company').value)+' · Kota Bharu, Kelantan</span></div>';p.dataset.number=no;zoom=1;applyZoom()}
-function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function render(){let v=values(),type=$('type').value,no=docNo(type),date=$('date').value,due=$('due').value;let p=$('paper');p.className='paper template-'+$('template').value;let rows=v.lines.map((x,i)=>'<tr><td>'+(i+1)+'</td><td>'+esc(x.desc)+'</td><td>'+x.qty+'</td><td>'+money(x.price)+'</td><td>'+money(x.qty*x.price)+'</td></tr>').join('');let title=type==='QT'?'QUOTATION':'INVOICE';let company=esc($('company').value),address=esc($('companyAddress').value).replaceAll('\\n','<br>'),phone=esc($('companyPhone').value),email=$('companyEmail')?esc($('companyEmail').value):'';let contact=[address,phone,email].filter(Boolean).join('<br>');p.innerHTML='<div class="top"><div class="brand-block"><div class="ssr-mark">SSR</div><div><div class="company">'+company+'</div><div class="sub">PROFESSIONAL · RELIABLE · EXCELLENT</div><div class="tagline">SINAR SAFUAN RESOURCES</div></div></div><div><div class="doc-title">'+title+'</div><div class="doc-no">'+no+'<br>Date: '+esc(date)+'<br>'+(type==='QT'?'Validity Period: ':'Due Date: ')+esc(due)+'</div></div></div><div class="contact-strip"><div>'+contact+'</div><div class="slogan">Your Trusted Partner<br>for a Better Tomorrow</div></div><div class="ribbon">'+title+'</div><div class="meta"><div class="customer-meta"><b>To / Customer Information</b>'+esc($('customer').value||'—')+'<br>'+esc($('reg').value)+'<br>'+esc($('phone').value)+'<br>'+esc($('address').value).replaceAll('\\n','<br>')+'</div><div class="doc-meta"><b>Document Details</b>'+ (type==='QT'?'Quotation No.':'Invoice No.')+' : '+no+'<br>Date : '+esc(date)+'<br>'+(type==='QT'?'Validity Period':'Payment Due')+' : '+esc(due)+'</div></div><table><thead><tr><th>No.</th><th>Description</th><th>Quantity</th><th>Unit Price (RM)</th><th>Total Price (RM)</th></tr></thead><tbody>'+rows+'</tbody></table><div class="sum"><div><span>Sub Total</span><b>'+money(v.subtotal)+'</b></div><div><span>Discount</span><b>'+money(v.discount)+'</b></div><div><span>SST</span><b>'+money(v.sst)+'</b></div><div class="grand"><span>Total</span><b>'+money(v.total)+'</b></div>'+(type==='QT'?'<div><span>Deposit ('+($('deposit').value||0)+'%)</span><b>'+money(v.deposit)+'</b></div>':'<div><span>Deposit received</span><b>'+money(v.deposit)+'</b></div><div><span>Balance</span><b>'+money(v.total-v.deposit)+'</b></div>')+'</div><div class="notes"><b>Terms & Conditions</b>'+esc($('terms').value)+'<br><br>Payment Details: '+esc($('bank').value)+' · '+esc($('account').value)+' · '+esc($('accountName').value)+'</div><div class="sign-row"><div>Prepared By,<div class="sign-line">Sales Executive<br>'+company+'</div></div><div>Approved By,<div class="sign-line">Authorised Signature<br>'+company+'</div></div></div><div class="foot"><span>Thank you for your kind attention. We look forward to serving you.</span><span>'+no+' · '+company+'</span></div>';p.dataset.number=no;zoom=1;applyZoom()}function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function applyZoom(){let fit=Math.min(1,Math.max(.25,($("previewWrap").clientWidth-24)/794));let z=fit*zoom;$("paper").style.transform="scale("+z+")";$("paper").style.marginBottom=(1123*(z-1))+"px";$("paper").style.marginLeft="auto";$("paper").style.marginRight="auto"}
 function show(tab){['form','preview','history'].forEach(x=>$(x).classList.toggle('hidden',x!==tab));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));if(tab==='history')showRecords();if(tab==='preview')setTimeout(applyZoom,40)}
 document.querySelectorAll('.tab').forEach(x=>x.onclick=()=>show(x.dataset.tab));
