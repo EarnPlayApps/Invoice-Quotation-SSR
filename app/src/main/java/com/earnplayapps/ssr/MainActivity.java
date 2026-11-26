@@ -46,7 +46,15 @@ public class MainActivity extends Activity {
                 });
             }
         }, "SSR");
-        web.setWebViewClient(new WebViewClient());
+        web.setWebViewClient(new WebViewClient() {
+            @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                Uri uri = request.getUrl();
+                if ("file".equals(uri.getScheme())) return false;
+                try { startActivity(new Intent(Intent.ACTION_VIEW, uri)); }
+                catch (Exception ignored) { }
+                return true;
+            }
+        });
         web.setWebChromeClient(new WebChromeClient() {
             @Override public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
                 if (fileCallback != null) fileCallback.onReceiveValue(null);
