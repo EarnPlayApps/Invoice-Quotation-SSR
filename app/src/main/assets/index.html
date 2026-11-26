@@ -693,26 +693,47 @@ main{max-width:1080px;padding:20px 18px 26px}
 .template-choice{transition:transform .15s,border-color .15s,box-shadow .15s}.template-choice:active{transform:scale(.985)}
 @media(max-width:600px){.template-thumb.mini-layout{height:155px}.mini-head{height:32px}.mini-2 .mini-head,.mini-3 .mini-head,.mini-4 .mini-head,.mini-5 .mini-head,.mini-10 .mini-head,.mini-12 .mini-head{height:39px}}
 
+
+/* Reference-matched SSR welding dashboard */
+header{background:linear-gradient(110deg,#07162a 0%,#102b4b 58%,#1c3b5d 100%);padding:13px 17px 14px;border-bottom:2px solid #c69a58}
+header .brand{gap:12px}.mark{background:linear-gradient(145deg,#f8e7c2,#b98b48);color:#14243a;border:1px solid #f7dfa9;box-shadow:inset 0 1px 5px #fff,0 4px 12px #0005}
+.dash-hero{min-height:245px;padding:22px 20px;border-radius:20px;background:radial-gradient(ellipse at 80% 52%,#315a7e 0%,#102d4d 43%,#07172c 78%);border:1px solid #d6b675;box-shadow:0 15px 34px #07172c45}
+.hero-copy{max-width:60%}.hero-mark{font-size:39px;margin:15px 0 5px;color:#f0d49b;text-shadow:0 3px 14px #e6bf6d66}.hero-copy h2{font:800 19px/1.15 Georgia,serif;letter-spacing:1px}.hero-copy p{font:italic 13px Georgia,serif;color:#f0d8a7}.hero-copy small{font-size:8px;letter-spacing:1.1px;color:#d8e5f2}
+.hero-art{width:54%;opacity:1;background:radial-gradient(ellipse at 72% 68%,#e2b96826,transparent 32%),linear-gradient(145deg,transparent 20%,#8eabc41a 20.5%,transparent 21%)}
+.weld-scene{position:absolute;width:100%;height:100%;inset:0;filter:drop-shadow(0 5px 12px #0008)}
+.dash-heading{margin:20px 2px 12px}.dash-heading h2{color:#122943;font-size:21px}.dash-heading p{font-size:10px}
+.primary-actions{gap:10px}.action-card{min-height:132px;border-radius:17px;padding:13px 13px 15px;box-shadow:inset 0 1px 0 #ffffff35,0 8px 20px #0b1c3030}
+.quote-card{background:linear-gradient(145deg,#173d65,#08192e);border-color:#c9a15e;color:#fff}.invoice-card{background:linear-gradient(145deg,#fffdf7,#e9dfcb);border-color:#c69a58;color:#14243a}
+.action-icon{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#274c70,#0b1d32);box-shadow:inset 0 1px 4px #fff4,0 3px 8px #0004}
+.invoice-card .action-icon{background:linear-gradient(145deg,#f9e8c6,#b98b48);color:#14243a}
+.action-label{font-size:8px;letter-spacing:1.6px}.action-card strong{font-size:14px}.action-card small{font-size:9px}
+.quick-grid{gap:9px;margin-top:13px}.quick-card{min-height:76px;padding:10px 9px;border-radius:13px;background:linear-gradient(145deg,#fffefa,#eee9df);border:1px solid #d9c8a6;box-shadow:inset 0 1px 0 #fff,0 5px 13px #18263a12;grid-template-columns:30px 1fr;column-gap:8px}
+.quick-icon{width:29px;height:29px;border-radius:9px;background:linear-gradient(145deg,#f7e6c1,#c49b5d);color:#152b45;border:1px solid #b99355;box-shadow:inset 0 1px 2px #fff;font-size:13px}
+.quick-card b{font-size:11px;color:#162b45}.quick-card small{font-size:8px;line-height:1.25}
+.dash-footer{border-color:#c6a36c;color:#80663d;font-size:7px}
+@media(max-width:560px){.dash-hero{min-height:218px;padding:18px 15px}.hero-copy{max-width:62%}.hero-mark{font-size:32px}.hero-copy h2{font-size:16px}.hero-art{width:54%;right:-4px}.quick-grid{gap:8px}.quick-card{min-height:73px}.action-card{min-height:132px}}
 </style></head><body>
-<header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
+<header><div class="brand"><div class="mark">SSR</div><div><h1>SSR INVOICE &amp; QUOTATION</h1><small>BUILD · FABRICATE · DELIVER</small></div></div></header>
 <main>
 <section id="dashboard" class="dashboard-screen">
   <div class="dash-hero">
-    <div class="hero-copy"><span class="eyebrow">WELDING · FABRICATION · STEELWORK</span><div class="hero-mark">SSR</div><h2>SINAR SAFUAN<br>RESOURCES</h2><p>Professional Business Solution</p><span class="hero-rule"></span><small>Smart · Simple · Professional</small></div>
-    <div class="hero-art" aria-hidden="true"><span class="arc arc-one"></span><span class="arc arc-two"></span><span class="spark"></span><span class="steel-line"></span></div>
+    <div class="hero-copy"><span class="eyebrow">SINAR SAFUAN RESOURCES</span><div class="hero-mark">SSR</div><h2>INVOICE &amp; QUOTATION</h2><p>Build · Fabricate · Deliver</p><span class="hero-rule"></span><small>WELDING · FABRICATION · METALWORK</small></div>
+    <div class="hero-art" aria-hidden="true"><svg class="weld-scene" viewBox="0 0 320 230" role="img" aria-label="Ilustrasi struktur keluli dan kerja kimpalan"><defs><linearGradient id="steelGlow" x1="0" x2="1"><stop stop-color="#6f9fc8"/><stop offset="1" stop-color="#d5b77c"/></linearGradient></defs><g fill="none" stroke="url(#steelGlow)" stroke-width="3" opacity=".72"><path d="M18 205V58L150 15 302 62V205M18 58l132 58 152-54M150 15v101M18 205l132-89 152 89M18 58v147M302 62v143M65 78v95m45-99v68m85-47v76m48-92v117M18 108l132 64 152-64M18 158l132 31 152-31"/></g><g fill="#101d32" stroke="#d9c08d" stroke-width="2"><path d="M197 112l21-28 27 8 15 25-10 28-31 9-22-17z"/><path d="M215 89l14-19 26 6 8 24-12 15-31-5z"/></g><path d="M234 115l31 27-12 17-34-28z" fill="#142b49" stroke="#d9c08d" stroke-width="2"/><path d="M257 132l26 22" stroke="#d9c08d" stroke-width="6" stroke-linecap="round"/><path d="M286 153l-20-8 11 20-19-4 16 17 3-14 13 4z" fill="#f8d88b"/><g fill="#f8d88b"><circle cx="287" cy="147" r="3"/><circle cx="302" cy="165" r="2"/><circle cx="270" cy="178" r="2"/></g></svg></div>
   </div>
-  <div class="dash-heading"><div><span class="eyebrow">WORKSPACE</span><h2>Urus perniagaan anda</h2><p>Pilih dokumen untuk mula bekerja</p></div><span class="live-mark">SSR</span></div>
+  <div class="dash-heading"><div><span class="eyebrow">WORKSPACE</span><h2>Menu Utama</h2><p>Semua urusan perniagaan dalam satu aplikasi</p></div><span class="live-mark">SSR</span></div>
   <div class="primary-actions">
-    <button class="action-card quote-card" data-open-doc="QT"><span class="action-icon">Q</span><span class="action-label">QUOTATION</span><strong>Buat Sebut Harga</strong><small>12 reka bentuk eksklusif</small><span class="action-arrow">↗</span></button>
-    <button class="action-card invoice-card" data-open-doc="INV"><span class="action-icon">I</span><span class="action-label">INVOICE</span><strong>Buat Invois</strong><small>12 reka bentuk eksklusif</small><span class="action-arrow">↗</span></button>
+    <button class="action-card quote-card" data-open-doc="QT"><span class="action-icon">▤</span><span class="action-label">QUOTATION</span><strong>Buat Quotation</strong><small>12 template profesional A4</small><span class="action-arrow">›</span></button>
+    <button class="action-card invoice-card" data-open-doc="INV"><span class="action-icon">＄</span><span class="action-label">INVOICE</span><strong>Buat Invoice</strong><small>12 template profesional A4</small><span class="action-arrow">›</span></button>
   </div>
   <div class="quick-grid">
-    <button class="quick-card" data-jump="customer"><span class="quick-icon">01</span><b>Pelanggan</b><small>Urus maklumat pelanggan</small></button>
-    <button class="quick-card" data-tab="history"><span class="quick-icon">02</span><b>Sejarah Dokumen</b><small>Semak rekod tersimpan</small></button>
-    <button class="quick-card" data-jump="calculator"><span class="quick-icon">03</span><b>Kalkulator</b><small>Kiraan kerja dan harga</small></button>
-    <button class="quick-card" data-jump="company"><span class="quick-icon">04</span><b>Maklumat Syarikat</b><small>Profil dan akaun bank</small></button>
+    <button class="quick-card" data-jump="customer"><span class="quick-icon">♙</span><b>Pelanggan</b><small>Senarai &amp; maklumat pelanggan</small></button>
+    <button class="quick-card" data-jump="calculator"><span class="quick-icon">＋</span><b>Kalkulator</b><small>Kiraan kos dan harga kerja</small></button>
+    <button class="quick-card" data-tab="tools"><span class="quick-icon">▦</span><b>Katalog</b><small>Produk &amp; perkhidmatan</small></button>
+    <button class="quick-card" data-tab="tools"><span class="quick-icon">▱</span><b>Projek</b><small>Kerja fabrication &amp; pemasangan</small></button>
+    <button class="quick-card" data-tab="history"><span class="quick-icon">◷</span><b>Sejarah</b><small>Dokumen dan rekod tersimpan</small></button>
+    <button class="quick-card" data-tab="payments"><span class="quick-icon">▣</span><b>Bayaran</b><small>Rekod bayaran &amp; resit</small></button>
   </div>
-  <div class="dash-footer"><span>BUILT FOR PRECISION</span><b>SINAR SAFUAN RESOURCES</b><span>WELD · FABRICATE · INSTALL</span></div>
+  <div class="dash-footer"><span>PROFESSIONAL · PRECISE</span><b>SINAR SAFUAN RESOURCES</b><span>WELD · FABRICATE · INSTALL</span></div>
 </section>
 <div class="tabs no-print"><button class="tab active" data-tab="form">Maklumat</button><button class="tab" data-tab="preview">Preview A4</button><button class="tab" data-tab="history">Rekod</button></div>
 <section id="form" class="hidden">
