@@ -559,6 +559,50 @@ input,select,textarea{border-radius:9px;background:#fff;border-color:#d9dce1;min
 .payment-qr-block b{display:block;font-size:9px;letter-spacing:1px}
 .payment-qr-block small{font-size:8px;opacity:.75}
 
+
+/* SSR premium steelwork visual system */
+:root{--ssr-navy:#12233b;--ssr-gold:#c7a46a;--ssr-ivory:#f4f0e8;--ssr-steel:#718094}
+body{background:linear-gradient(145deg,#f7f5f0,#e9edf1);color:#1b2a3d}
+header{background:linear-gradient(115deg,#0e1d31,#253c58);border-bottom:1px solid #c6a36d}
+.mark{background:linear-gradient(145deg,#fff,#d6c29c);box-shadow:inset 1px 1px 4px #fff,0 3px 12px #0003;color:#12233b;border:1px solid #ead6ae}
+.dash-hero{background:linear-gradient(110deg,#101e31ed,#172b43e8),url('steel-welding-cover.jpg') center/cover;border:1px solid #b9955f;box-shadow:0 15px 36px #172a401c}
+.action-card{border:1px solid #d4c4a5;box-shadow:0 8px 22px #16283e13;background:linear-gradient(145deg,#fff,#f1eee7)}
+.action-icon,.nav-item span,.quick-card .quick-icon{display:grid;place-items:center;border:1px solid #e1c58e;background:linear-gradient(145deg,#fff,#d9c49a);color:#152842;box-shadow:inset 1px 1px 3px #fff,0 3px 9px #18283a25;border-radius:12px;text-shadow:0 1px #fff}
+.bottom-nav{grid-template-columns:repeat(6,1fr);background:#101d32f7}
+.nav-item span{font-size:0;width:30px;height:28px;border-radius:9px;position:relative}
+.nav-item span:before{font-size:16px;font-weight:900;content:"";width:12px;height:12px;border:2px solid currentColor;border-radius:3px;box-shadow:inset 0 0 0 2px #ffffff33}
+.nav-item:nth-child(1) span:before{border-radius:3px 3px 1px 1px;transform:rotate(45deg);border-right:0;border-bottom:0}
+.nav-item:nth-child(2) span:before{width:13px;height:15px;border-radius:2px;box-shadow:inset 0 -4px #ffffff77,inset 0 -8px #ffffff77}
+.nav-item:nth-child(3) span:before{border-radius:2px;box-shadow:inset 0 0 0 2px #ffffff33,inset 0 0 0 4px transparent}
+.nav-item:nth-child(4) span:before{border-radius:50%;width:13px;height:13px}
+.nav-item:nth-child(5) span:before{border-radius:50%;width:14px;height:14px;box-shadow:inset 0 0 0 3px #ffffff33}
+.nav-item:nth-child(6) span:before{width:15px;height:10px;border-radius:2px;transform:skew(-12deg)}
+/* Template picker as visual catalogue */
+.template-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.template-choice{border:1px solid #d9d4ca;border-radius:13px;padding:9px;background:#fff;text-align:left;box-shadow:0 5px 14px #1a2a3d0d;min-width:0}
+.template-choice.selected{border:2px solid #b38d50;box-shadow:0 0 0 3px #c8a66a33}
+.template-thumb{height:158px;position:relative;overflow:hidden;background:var(--thumb-bg,#f7f6f2);border:1px solid #e4e0d7;border-radius:5px;padding:13px 10px;color:var(--thumb-ink,#20344c)}
+.template-thumb .t-head{height:29px;background:var(--thumb-head,#182b44);margin:-13px -10px 10px;padding:7px 8px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.template-thumb .t-brand{width:45%;height:4px;background:currentColor;opacity:.8}
+.template-thumb .t-title{font:bold 9px Arial;letter-spacing:1px}
+.template-thumb .t-meta{height:17px;border:1px solid var(--thumb-accent,#c39a58);margin:7px 0}
+.template-thumb .t-lines{height:5px;background:var(--thumb-line,#d5dce4);margin:6px 0}
+.template-thumb .t-lines:nth-child(odd){width:85%}
+.template-thumb .t-total{height:17px;background:var(--thumb-accent,#c39a58);margin-top:9px}
+.template-thumb .t-photo{position:absolute;right:8px;top:43px;width:44px;height:28px;border-radius:3px;background:linear-gradient(135deg,#172638,#40586c 45%,#dca75d 48%,#fff0b2 53%,#27394b 58%);opacity:.82}
+.template-choice b{display:block;font-size:12px;margin-top:8px;color:#1b2b40}
+.template-choice small{font-size:10px;color:#7a8490;display:block;margin-top:3px}
+.customer-screen{padding-bottom:100px}
+#customerPanel{margin-top:12px}
+#settings .panel,#tools .panel,#payments .panel{background:linear-gradient(145deg,#fff,#f8f6f1)}
+#preview.preview-fullscreen{position:fixed;inset:0;z-index:9999;background:#dfe3e7;padding:8px;overflow:hidden}
+#preview.preview-fullscreen .preview-panel{height:100%;display:flex;flex-direction:column;gap:7px}
+#preview.preview-fullscreen .preview-wrap{flex:1;min-height:0;overflow:auto;display:flex;justify-content:center;align-items:flex-start;touch-action:pan-x pan-y}
+#preview.preview-fullscreen .paper{flex:none;transform-origin:top center;box-shadow:0 8px 30px #17283b30}
+#preview.preview-fullscreen .preview-tools{display:flex;position:sticky;top:0;background:#fff;border-radius:10px;padding:6px;z-index:3}
+#preview.preview-fullscreen .actions{position:sticky;bottom:0;background:#f7f5f0;padding:6px;z-index:3}
+@media(max-width:600px){.template-gallery{gap:9px}.template-thumb{height:140px}.template-choice{padding:7px}.bottom-nav{padding-left:3px;padding-right:3px}.nav-item small{font-size:8px}}
+
 </style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
 <main>
@@ -827,4 +871,66 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  };
 
 })();
+
+
+/* Customer management is a dedicated destination; template choices are image cards. */
+(function(){
+ const form=$('form'),customerPanel=$('customerPanel'),history=$('history');
+ const customerScreen=document.createElement('section');customerScreen.id='customers';customerScreen.className='hidden customer-screen';
+ customerScreen.innerHTML='<div class="dash-heading"><div><span class="eyebrow">CUSTOMER DIRECTORY</span><h2>Pengurusan pelanggan</h2><p>Simpan maklumat pelanggan untuk digunakan semula</p></div></div>';
+ customerScreen.append(customerPanel);history.after(customerScreen);
+ const nav=document.querySelector('.bottom-nav');
+ nav.innerHTML='<button class="nav-item" data-tab="dashboard"><span></span><small>Utama</small></button><button class="nav-item" data-open-doc="QT"><span></span><small>Quotation</small></button><button class="nav-item" data-open-doc="INV"><span></span><small>Invoice</small></button><button class="nav-item" data-tab="customers"><span></span><small>Pelanggan</small></button><button class="nav-item" data-tab="history"><span></span><small>Rekod</small></button><button class="nav-item" data-tab="settings"><span></span><small>Tetapan</small></button>';
+ const toolPanel=$('tools');if(toolPanel){toolPanel.querySelectorAll('.panel').forEach(p=>{const h=p.querySelector('h2')?.textContent||'';if(h.includes('Katalog')||h.includes('projek')){} });}
+ // Relocate payment, tools, and settings panels if an older build still has them nested in form.
+ const panels=[...form.querySelectorAll(':scope > .panel')];
+ let payments=document.getElementById('payments'),settings=document.getElementById('settings'),tools=document.getElementById('tools');
+ if(!payments){payments=document.createElement('section');payments.id='payments';payments.className='hidden';payments.innerHTML='<div class="dash-heading"><h2>Bayaran & resit</h2></div>';history.after(payments)}
+ if(!settings){settings=document.createElement('section');settings.id='settings';settings.className='hidden';settings.innerHTML='<div class="dash-heading"><h2>Tetapan syarikat</h2><p>Profil, aset QR, backup dan keselamatan</p></div>';history.after(settings)}
+ if(!tools){tools=document.createElement('section');tools.id='tools';tools.className='hidden';tools.innerHTML='<div class="dash-heading"><h2>Alat perniagaan</h2></div>';history.after(tools)}
+ const settingNames=['Maklumat syarikat (disimpan automatik)','Identiti syarikat & aset dokumen','Backup & pemulihan data','Kunci keselamatan aplikasi'];
+ const toolNames=['Kalkulator syarikat','Katalog produk & perkhidmatan','Pengurusan projek / kerja'];
+ panels.forEach(p=>{const h=p.querySelector('h2')?.textContent.trim();if(h==='Bayaran & resit')payments.append(p);else if(settingNames.includes(h))settings.append(p);else if(toolNames.includes(h))tools.append(p)});
+ const actionBar=form.querySelector(':scope > .actions');if(actionBar)form.append(actionBar);
+ const typePanel=form.querySelector(':scope > .panel');
+ const templatePanel=document.createElement('div');templatePanel.className='panel';templatePanel.id='templatePickerPanel';
+ templatePanel.innerHTML='<h2>Pilih reka bentuk dokumen</h2><p class="hint">Pilih berdasarkan rupa A4. Setiap reka bentuk ada susun atur dan warna tersendiri.</p><div id="templateGallery" class="template-gallery"></div>';
+ if(typePanel)typePanel.after(templatePanel);
+ // Hide text-only select controls; keep their values as the source of truth.
+ $('quotationTemplateField').classList.add('hidden');$('invoiceTemplateField').classList.add('hidden');
+ const palette=[
+ ['#14243b','#c6a16a','#f5f1e8','Navy & Champagne','Corporate welding'],
+ ['#17445c','#68a6bd','#eef5f7','Blue Steel','Modern fabrication'],
+ ['#222a38','#b58c4d','#f5f1e8','Royal Foundry','Premium workshop'],
+ ['#454b53','#9ba3aa','#f4f4f2','Graphite','Precision engineering'],
+ ['#604b37','#b58c59','#faf6ee','Ivory Workshop','Clean industrial'],
+ ['#253d38','#b89d6c','#f3efe5','Champagne Craft','Luxury metalwork'],
+ ['#354453','#aeb8c0','#f7f7f4','Silverline','Steel engineering'],
+ ['#5b392b','#bd7549','#f8eee6','Copper Forge','Welding specialist'],
+ ['#f2eee5','#c7a66c','#171c24','Obsidian Gold','Black luxury'],
+ ['#283d53','#aeb9c7','#edf1f4','Platinum','Executive industrial'],
+ ['#183344','#62a2a0','#eef3f2','Midnight Arc','Arc welding'],
+ ['#443a31','#b9a17a','#f7f4ed','Signature','Bespoke fabrication']
+ ];
+ const gallery=$('templateGallery');
+ function paintGallery(){const sel=+$ ( $('type').value==='INV'?'invoiceTemplate':'quotationTemplate').value||1;gallery.innerHTML=palette.map((p,i)=>'<button type="button" class="template-choice '+(sel===i+1?'selected':'')+'" data-template="'+(i+1)+'" style="--thumb-head:'+p[0]+';--thumb-accent:'+p[1]+';--thumb-bg:'+p[2]+';--thumb-ink:'+p[0]+'"><div class="template-thumb"><div class="t-head"><span class="t-brand"></span><span class="t-title">'+String(i+1).padStart(2,'0')+'</span></div><div class="t-photo"></div><div class="t-meta"></div><div class="t-lines"></div><div class="t-lines"></div><div class="t-lines"></div><div class="t-lines"></div><div class="t-total"></div></div><b>'+p[3]+'</b><small>'+p[4]+'</small></button>').join('')}
+ gallery.addEventListener('click',e=>{const b=e.target.closest('[data-template]');if(!b)return;const target=$('type').value==='INV'?'invoiceTemplate':'quotationTemplate';$(target).value=b.dataset.template;paintGallery();});
+ $('type').addEventListener('change',paintGallery);$('quotationTemplate').addEventListener('change',paintGallery);$('invoiceTemplate').addEventListener('change',paintGallery);paintGallery();
+ // Dedicated route controller; tapping a destination always opens that destination.
+ const tabs=['dashboard','form','preview','history','customers','payments','tools','settings'];
+ window.ssrShow=function(tab){tabs.forEach(id=>$(id)?.classList.toggle('hidden',id!==tab));document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab||(tab==='form'&&b.dataset.openDoc===$('type').value)));if(tab==='history')showRecords();if(tab==='customers')refreshCustomers();if(tab==='payments')refreshPaymentUI?.();window.scrollTo({top:0,behavior:'instant'});};
+ window.show=window.ssrShow;
+ // Rewire all destination actions, including the document cards.
+ document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.openDoc){$('type').value=b.dataset.openDoc;syncTemplateFields();paintGallery();ssrShow('form')}else if(b.dataset.tab)ssrShow(b.dataset.tab)}));
+ document.querySelectorAll('[data-open-doc]').forEach(b=>b.addEventListener('click',()=>{$('type').value=b.dataset.openDoc;syncTemplateFields();paintGallery();ssrShow('form')}));
+ document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>ssrShow(b.dataset.jump==='company'?'settings':b.dataset.jump==='calculator'?'tools':'customers')));
+ $('make').onclick=()=>{render();zoom=1;ssrShow('preview');const panel=document.querySelector('.preview-panel');panel.classList.add('is-fullscreen');$('preview').classList.add('preview-fullscreen');$('fullscreenToggle').textContent='Tutup';document.body.style.overflow='hidden';setTimeout(()=>{zoom=1;applyZoom()},100)};
+ $('fullscreenToggle').onclick=()=>{ssrShow('form');$('preview').classList.remove('preview-fullscreen');document.querySelector('.preview-panel').classList.remove('is-fullscreen');document.body.style.overflow=''};
+ $('back').onclick=()=>ssrShow('form');
+ // One complete A4 page fitted initially, pinch to zoom when needed.
+ $('fitPage').onclick=()=>{zoom=1;applyZoom();$('previewWrap').scrollTo({top:0,left:0})};
+ const companyTitle=document.querySelector('#settings .dash-heading');
+ if(companyTitle){const intro=document.createElement('p');intro.textContent='Logo syarikat, QR DuitNow, tandatangan, maklumat bank dan backup disimpan di sini.';companyTitle.append(intro)}
+})();
+
 </script></body></html>
