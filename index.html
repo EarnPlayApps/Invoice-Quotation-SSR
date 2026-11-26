@@ -135,7 +135,88 @@
 .paper.template-9 .top{border-bottom-style:double;border-bottom-width:8px}
 .paper.template-10 .top,.paper.template-12 .top{box-shadow:inset 0 -2px 0 #ffffff20}
 @media(max-width:560px){.paper{padding:0 22px 24px}.paper .top{margin:0 -22px;padding:20px 22px;gap:10px;min-height:125px}.paper .ssr-mark{width:66px;height:44px;font-size:23px}.paper .company{font-size:17px}.paper .doc-title{font-size:21px}.paper .doc-no{font-size:9px}.paper .contact-strip{font-size:9px}.paper .contact-strip .slogan{font-size:12px}.paper .ribbon{font-size:20px;padding:7px 20px}.paper .meta{grid-template-columns:1fr 1fr;gap:8px}.paper .meta>div{font-size:10px;padding:9px}.paper .meta b{margin:-9px -9px 7px;padding:7px;font-size:11px}.paper table{font-size:9px}.paper th{font-size:10px;padding:7px 3px}.paper td{padding:7px 3px}.paper .sum{width:58%;font-size:10px}.paper .sum .grand{font-size:14px}.paper .notes{font-size:9px}.paper .sign-row{gap:25px;font-size:10px}.paper .foot{margin:22px -22px -24px;padding:18px 22px}}
-\n/* Preview A4: full-page fit and fullscreen inspection */\n.preview-wrap{height:min(68vh,760px);min-height:340px;overflow:auto;overscroll-behavior:contain;display:block}\n.preview-panel.is-fullscreen{position:fixed;inset:0;z-index:1000;margin:0;border-radius:0;padding:12px;display:flex;flex-direction:column;overflow:hidden;background:#f7f8fa}\n.preview-panel.is-fullscreen .preview-tools{flex:none;gap:6px;flex-wrap:wrap}\n.preview-panel.is-fullscreen .preview-wrap{height:auto;min-height:0;max-height:none;flex:1;width:100%;border-radius:10px}\n.preview-panel.is-fullscreen .actions{flex:none}\n@media(max-width:560px){.preview-wrap{height:62vh;min-height:300px;padding:8px}.preview-panel.is-fullscreen{padding:8px}.preview-panel.is-fullscreen .preview-tools{font-size:11px}.preview-panel.is-fullscreen .preview-tools .btn{padding:9px 10px;font-size:12px}}\n</style></head><body>
+\n
+/* 12 distinct professional quotation and invoice compositions */
+.paper.template-1 .contact-strip{border-bottom:3px solid var(--accent);background:#faf6ed;padding:14px 12px}
+.paper.template-1 .ribbon{box-shadow:0 4px 12px #071d3820}
+.paper.template-1 .meta>div{border-radius:2px}
+.paper.template-1 .sum{border-radius:2px}
+.paper.template-2 .top{min-height:158px;border-radius:0 0 34px 0;position:relative}
+.paper.template-2 .top:after{content:"";position:absolute;right:0;bottom:0;width:38%;height:7px;background:var(--accent)}
+.paper.template-2 .contact-strip{background:#eef6f0;padding:14px;border:0;border-radius:0 0 16px 16px}
+.paper.template-2 .meta{grid-template-columns:1fr 1fr}
+.paper.template-2 .meta>div{border:0;border-bottom:3px solid var(--accent);border-radius:0}
+.paper.template-3 .top{display:grid;grid-template-columns:1fr auto;align-items:center}
+.paper.template-3 .brand-block{grid-column:1;grid-row:1}
+.paper.template-3 .top>div:last-child{grid-column:2;grid-row:1}
+.paper.template-3 .contact-strip{border:0;border-left:5px solid var(--accent);padding:12px 16px;background:#edf4fb}
+.paper.template-3 .ribbon{margin:20px 0;width:100%;max-width:none;text-align:left;border-radius:0}
+.paper.template-3 .meta{grid-template-columns:1fr 1fr}
+.paper.template-4 .top{display:flex;flex-direction:column;align-items:stretch;text-align:center;padding-top:28px;padding-bottom:24px}
+.paper.template-4 .brand-block{justify-content:center}
+.paper.template-4 .top>div:last-child{display:flex;align-items:center;justify-content:space-between;text-align:left;border-top:1px solid var(--accent);padding-top:14px}
+.paper.template-4 .doc-title,.paper.template-4 .doc-no{text-align:right}
+.paper.template-4 .contact-strip{border-bottom:3px double var(--accent);justify-content:center;text-align:center}
+.paper.template-4 .ribbon{border-radius:0;padding:10px 42px}
+.paper.template-5 .top{border-radius:0 0 42px 0;min-height:160px}
+.paper.template-5 .ssr-mark{border-radius:18px;transform:rotate(-5deg)}
+.paper.template-5 .contact-strip{border:0;background:#f4effa;border-radius:12px;padding:14px;margin-top:14px}
+.paper.template-5 .ribbon{margin:18px 0 18px auto;border-radius:18px 4px 18px 4px}
+.paper.template-5 .meta>div{border:0;border-left:5px solid var(--accent);box-shadow:0 3px 12px #42285f10}
+.paper.template-6 .top{min-height:120px;padding-top:18px;padding-bottom:18px;border-left:14px solid var(--accent)}
+.paper.template-6 .ssr-mark{border-radius:8px;width:72px;height:60px}
+.paper.template-6 .contact-strip{display:block;background:#edf8f8;padding:12px 16px;border:0}
+.paper.template-6 .contact-strip .slogan{max-width:none;text-align:left;margin-top:5px}
+.paper.template-6 .ribbon{margin:16px 0;width:100%;max-width:none;text-align:left;border-radius:4px}
+.paper.template-6 .meta{grid-template-columns:1fr}
+.paper.template-6 .meta>div{border-radius:4px}
+.paper.template-7 .top{background:#f1f3f5;border-bottom:2px solid var(--accent);color:#202b38}
+.paper.template-7 .company,.paper.template-7 .doc-title{color:var(--head)}
+.paper.template-7 .doc-no,.paper.template-7 .sub{color:#5d6875}
+.paper.template-7 .ssr-mark{border-radius:4px;box-shadow:none}
+.paper.template-7 .contact-strip{border-bottom:1px solid #cbd1d8}
+.paper.template-7 .ribbon{background:#e9edf1;color:var(--head);border:0;border-left:5px solid var(--accent);border-radius:0;width:100%;max-width:none;text-align:left}
+.paper.template-7 .meta>div{border-radius:0;background:#f8f9fa}
+.paper.template-7 .sum{border-radius:0}
+.paper.template-8 .top{border-radius:0 0 0 32px}
+.paper.template-8 .ssr-mark{border-radius:50% 50% 8px 50%;background:#fff2e9}
+.paper.template-8 .contact-strip{background:#fff1e8;border:0;border-bottom:2px solid var(--accent);padding:14px}
+.paper.template-8 .ribbon{margin:18px 0;width:100%;max-width:none;border-radius:0 20px 0 20px;text-align:left}
+.paper.template-8 .meta>div{border-radius:0 12px 0 12px}
+.paper.template-9 .top{min-height:132px;border-bottom:8px double var(--accent)}
+.paper.template-9 .contact-strip{display:grid;grid-template-columns:1.5fr 1fr;align-items:center}
+.paper.template-9 .ribbon{border-radius:3px;padding:8px 24px}
+.paper.template-9 .meta{grid-template-columns:1fr 1fr}
+.paper.template-9 .meta>div{border-radius:3px;background:#f1f5f8}
+.paper.template-9 .sum{border-radius:3px}
+.paper.template-10 .top{min-height:166px;border-bottom:8px solid var(--accent);outline:1px solid #ffffff20;outline-offset:-10px}
+.paper.template-10 .ssr-mark{border-radius:50%;width:82px;height:82px}
+.paper.template-10 .contact-strip{background:#f7f0df;padding:14px;border:0}
+.paper.template-10 .ribbon{border-radius:0;border-width:1px;box-shadow:4px 4px 0 var(--head)}
+.paper.template-10 .meta>div{border-radius:0;border-color:#c8b37f}
+.paper.template-10 .sum{border-radius:0}
+.paper.template-11 .top{flex-direction:row-reverse}
+.paper.template-11 .brand-block{flex-direction:row-reverse;text-align:right}
+.paper.template-11 .top>div:last-child{text-align:left}
+.paper.template-11 .doc-title,.paper.template-11 .doc-no{text-align:left}
+.paper.template-11 .contact-strip{border-bottom:4px solid var(--accent);background:#f0f6ed;padding:14px}
+.paper.template-11 .ribbon{margin:18px 0 18px auto;border-radius:24px 4px 24px 4px}
+.paper.template-11 .meta>div{border-left:4px solid var(--accent);border-radius:4px}
+.paper.template-12 .top{min-height:154px;border-bottom:10px solid var(--accent)}
+.paper.template-12 .ssr-mark{border-radius:4px 18px 4px 18px;background:#ffffff12}
+.paper.template-12 .contact-strip{background:#fff0f0;border:0;border-bottom:1px solid var(--accent);padding:14px}
+.paper.template-12 .ribbon{width:100%;max-width:none;border-radius:0;text-align:center;box-shadow:0 5px 0 #842b3218}
+.paper.template-12 .meta>div{border:1px solid #e5bfc0;border-radius:0}
+.paper.template-12 .sum{border-radius:0}
+@media(max-width:560px){
+.paper.template-4 .top>div:last-child{gap:8px;align-items:flex-start}
+.paper.template-4 .doc-title{font-size:17px}
+.paper.template-4 .doc-no{font-size:8px}
+.paper.template-6 .meta{grid-template-columns:1fr}
+.paper.template-11 .brand-block{gap:8px}
+}
+
+/* Preview A4: full-page fit and fullscreen inspection */\n.preview-wrap{height:min(68vh,760px);min-height:340px;overflow:auto;overscroll-behavior:contain;display:block}\n.preview-panel.is-fullscreen{position:fixed;inset:0;z-index:1000;margin:0;border-radius:0;padding:12px;display:flex;flex-direction:column;overflow:hidden;background:#f7f8fa}\n.preview-panel.is-fullscreen .preview-tools{flex:none;gap:6px;flex-wrap:wrap}\n.preview-panel.is-fullscreen .preview-wrap{height:auto;min-height:0;max-height:none;flex:1;width:100%;border-radius:10px}\n.preview-panel.is-fullscreen .actions{flex:none}\n@media(max-width:560px){.preview-wrap{height:62vh;min-height:300px;padding:8px}.preview-panel.is-fullscreen{padding:8px}.preview-panel.is-fullscreen .preview-tools{font-size:11px}.preview-panel.is-fullscreen .preview-tools .btn{padding:9px 10px;font-size:12px}}\n</style></head><body>
 <header><div class="brand"><div class="mark">SSR</div><div><h1>INVOICE / QUOTATION SSR</h1><small>SINAR SAFUAN RESOURCES · Document Manager</small></div></div></header>
 <main><div class="tabs no-print"><button class="tab active" data-tab="form">Maklumat</button><button class="tab" data-tab="preview">Preview A4</button><button class="tab" data-tab="history">Rekod</button></div>
 <section id="form">
