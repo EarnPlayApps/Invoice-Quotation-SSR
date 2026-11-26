@@ -918,7 +918,7 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  $('type').addEventListener('change',paintGallery);$('quotationTemplate').addEventListener('change',paintGallery);$('invoiceTemplate').addEventListener('change',paintGallery);paintGallery();
  // Dedicated route controller; tapping a destination always opens that destination.
  const tabs=['dashboard','form','preview','history','customers','payments','tools','settings'];
- window.ssrShow=function(tab){tabs.forEach(id=>$(id)?.classList.toggle('hidden',id!==tab));document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab||(tab==='form'&&b.dataset.openDoc===$('type').value)));if(tab==='history')showRecords();if(tab==='customers')refreshCustomers();if(tab==='payments')refreshPaymentUI?.();window.scrollTo({top:0,behavior:'instant'});};
+ window.ssrShow=function(tab){tabs.forEach(id=>$(id)?.classList.toggle('hidden',id!==tab));document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab||(tab==='form'&&b.dataset.openDoc===$('type').value)));if(tab==='history')showRecords();if(tab==='customers')refreshCustomers();window.scrollTo({top:0,behavior:'instant'});};
  window.show=window.ssrShow;
  // Rewire all destination actions, including the document cards.
  document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.openDoc){$('type').value=b.dataset.openDoc;syncTemplateFields();paintGallery();ssrShow('form')}else if(b.dataset.tab)ssrShow(b.dataset.tab)}));
@@ -931,6 +931,22 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  $('fitPage').onclick=()=>{zoom=1;applyZoom();$('previewWrap').scrollTo({top:0,left:0})};
  const companyTitle=document.querySelector('#settings .dash-heading');
  if(companyTitle){const intro=document.createElement('p');intro.textContent='Logo syarikat, QR DuitNow, tandatangan, maklumat bank dan backup disimpan di sini.';companyTitle.append(intro)}
+})();
+
+
+/* Glass-metal iconography: bespoke line symbols, not emoji or text glyphs */
+(function(){
+ const icons={
+ dashboard:'<path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5M9 21v-6h6v6"/>',
+ quote:'<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h7M9 16h7"/>',
+ invoice:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 9h6M9 13h6"/>',
+ customer:'<circle cx="9" cy="8" r="3.2"/><path d="M3 20c.4-3.5 2.4-5.2 6-5.2s5.6 1.7 6 5.2M16 5.5a3 3 0 0 1 0 5.8M17 15c2.3.5 3.5 2.1 3.8 4.5"/>',
+ history:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+ settings:'<circle cx="12" cy="12" r="3"/><path d="m19 13.5 1.4 1.1-1.4 2.4-1.7-.5a7.5 7.5 0 0 1-1.8 1l-.3 1.8h-2.8l-.4-1.8a7.5 7.5 0 0 1-1.8-1l-1.7.5-1.4-2.4 1.4-1.1a7 7 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.5a7.5 7.5 0 0 1 1.8-1l.4-1.8h2.8l.3 1.8a7.5 7.5 0 0 1 1.8 1l1.7-.5 1.4 2.4-1.4 1.1a7 7 0 0 1 0 2z"/>'
+ };
+ document.querySelectorAll('.bottom-nav .nav-item').forEach((b,i)=>{const key=['dashboard','quote','invoice','customer','history','settings'][i];b.querySelector('span').innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">'+icons[key]+'</svg>'});
+ const st=document.createElement('style');st.textContent='.nav-item span svg{width:18px;height:18px;filter:drop-shadow(0 1px 1px #fff8)}.nav-item span{width:32px;height:30px;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#d4c19d);border:1px solid #e8d4ad;border-radius:10px;box-shadow:inset 1px 1px 3px #fff,0 3px 8px #0003;color:#18304a}.nav-item.active span{background:linear-gradient(145deg,#f9e7be,#b68d4d);color:#14243a}';
+ document.head.append(st);
 })();
 
 </script></body></html>
