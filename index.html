@@ -816,6 +816,7 @@ $('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;t
  window.show=window.ssrShow;
  // Rewire all destination actions, including the document cards.
  document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.openDoc){$('type').value=b.dataset.openDoc;syncTemplateFields();paintGallery();ssrShow('form')}else if(b.dataset.tab)ssrShow(b.dataset.tab)}));
+  document.querySelectorAll('.quick-card[data-tab]').forEach(b=>b.addEventListener('click',()=>ssrShow(b.dataset.tab)));
  document.querySelectorAll('[data-open-doc]').forEach(b=>b.addEventListener('click',()=>{$('type').value=b.dataset.openDoc;syncTemplateFields();paintGallery();ssrShow('form')}));
  document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>ssrShow(b.dataset.jump==='company'?'settings':b.dataset.jump==='calculator'?'tools':'customers')));
  $('make').onclick=()=>{render();zoom=1;ssrShow('preview');const panel=document.querySelector('.preview-panel');panel.classList.add('is-fullscreen');$('preview').classList.add('preview-fullscreen');$('fullscreenToggle').textContent='Tutup';document.body.style.overflow='hidden';setTimeout(()=>{zoom=1;applyZoom()},100)};
