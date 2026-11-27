@@ -1,7 +1,0 @@
-plugins { id 'com.android.application' }
-
-android {
-    namespace 'com.earnplayapps.ssr'
-    compileSdk 35
-    defaultConfig { applicationId 'com.earnplayapps.ssr'; minSdk 23; targetSdk 35; versionCode 2; versionName '1.1' }
-}
